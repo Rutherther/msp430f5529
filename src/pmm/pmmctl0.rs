@@ -34,8 +34,10 @@ impl From<crate::W<PMMCTL0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `PMMCOREV` reader - PMM Core Voltage Bit: 0"]
+pub type PMMCOREV_R = crate::FieldReader<u8, PMMCOREV_A>;
 #[doc = "PMM Core Voltage Bit: 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PMMCOREV_A {
     #[doc = "0: PMM Core Voltage 0 (1.35V)"]
@@ -53,14 +55,8 @@ impl From<PMMCOREV_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `PMMCOREV` reader - PMM Core Voltage Bit: 0"]
-pub struct PMMCOREV_R(crate::FieldReader<u8, PMMCOREV_A>);
 impl PMMCOREV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PMMCOREV_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PMMCOREV_A {
         match self.bits {
@@ -74,41 +70,28 @@ impl PMMCOREV_R {
     #[doc = "Checks if the value of the field is `PMMCOREV_0`"]
     #[inline(always)]
     pub fn is_pmmcorev_0(&self) -> bool {
-        **self == PMMCOREV_A::PMMCOREV_0
+        *self == PMMCOREV_A::PMMCOREV_0
     }
     #[doc = "Checks if the value of the field is `PMMCOREV_1`"]
     #[inline(always)]
     pub fn is_pmmcorev_1(&self) -> bool {
-        **self == PMMCOREV_A::PMMCOREV_1
+        *self == PMMCOREV_A::PMMCOREV_1
     }
     #[doc = "Checks if the value of the field is `PMMCOREV_2`"]
     #[inline(always)]
     pub fn is_pmmcorev_2(&self) -> bool {
-        **self == PMMCOREV_A::PMMCOREV_2
+        *self == PMMCOREV_A::PMMCOREV_2
     }
     #[doc = "Checks if the value of the field is `PMMCOREV_3`"]
     #[inline(always)]
     pub fn is_pmmcorev_3(&self) -> bool {
-        **self == PMMCOREV_A::PMMCOREV_3
-    }
-}
-impl core::ops::Deref for PMMCOREV_R {
-    type Target = crate::FieldReader<u8, PMMCOREV_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PMMCOREV_A::PMMCOREV_3
     }
 }
 #[doc = "Field `PMMCOREV` writer - PMM Core Voltage Bit: 0"]
-pub struct PMMCOREV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMCOREV_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PMMCOREV_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type PMMCOREV_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, PMMCTL0_SPEC, u8, PMMCOREV_A, 2, O>;
+impl<'a, const O: u8> PMMCOREV_W<'a, O> {
     #[doc = "PMM Core Voltage 0 (1.35V)"]
     #[inline(always)]
     pub fn pmmcorev_0(self) -> &'a mut W {
@@ -129,213 +112,80 @@ impl<'a> PMMCOREV_W<'a> {
     pub fn pmmcorev_3(self) -> &'a mut W {
         self.variant(PMMCOREV_A::PMMCOREV_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u16 & 0x03);
-        self.w
-    }
 }
 #[doc = "Field `PMMSWBOR` reader - PMM Software BOR"]
-pub struct PMMSWBOR_R(crate::FieldReader<bool, bool>);
-impl PMMSWBOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMSWBOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMSWBOR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMSWBOR_R = crate::BitReader<bool>;
 #[doc = "Field `PMMSWBOR` writer - PMM Software BOR"]
-pub struct PMMSWBOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMSWBOR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PMMSWBOR_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, O>;
 #[doc = "Field `PMMSWPOR` reader - PMM Software POR"]
-pub struct PMMSWPOR_R(crate::FieldReader<bool, bool>);
-impl PMMSWPOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMSWPOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMSWPOR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMSWPOR_R = crate::BitReader<bool>;
 #[doc = "Field `PMMSWPOR` writer - PMM Software POR"]
-pub struct PMMSWPOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMSWPOR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PMMSWPOR_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, O>;
 #[doc = "Field `PMMREGOFF` reader - PMM Turn Regulator off"]
-pub struct PMMREGOFF_R(crate::FieldReader<bool, bool>);
-impl PMMREGOFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMREGOFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMREGOFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMREGOFF_R = crate::BitReader<bool>;
 #[doc = "Field `PMMREGOFF` writer - PMM Turn Regulator off"]
-pub struct PMMREGOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMREGOFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type PMMREGOFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, O>;
 #[doc = "Field `PMMHPMRE` reader - PMM Global High Power Module Request Enable"]
-pub struct PMMHPMRE_R(crate::FieldReader<bool, bool>);
-impl PMMHPMRE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMHPMRE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMHPMRE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMHPMRE_R = crate::BitReader<bool>;
 #[doc = "Field `PMMHPMRE` writer - PMM Global High Power Module Request Enable"]
-pub struct PMMHPMRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMHPMRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type PMMHPMRE_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - PMM Core Voltage Bit: 0"]
     #[inline(always)]
     pub fn pmmcorev(&self) -> PMMCOREV_R {
-        PMMCOREV_R::new((self.bits & 0x03) as u8)
+        PMMCOREV_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - PMM Software BOR"]
     #[inline(always)]
     pub fn pmmswbor(&self) -> PMMSWBOR_R {
-        PMMSWBOR_R::new(((self.bits >> 2) & 0x01) != 0)
+        PMMSWBOR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PMM Software POR"]
     #[inline(always)]
     pub fn pmmswpor(&self) -> PMMSWPOR_R {
-        PMMSWPOR_R::new(((self.bits >> 3) & 0x01) != 0)
+        PMMSWPOR_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - PMM Turn Regulator off"]
     #[inline(always)]
     pub fn pmmregoff(&self) -> PMMREGOFF_R {
-        PMMREGOFF_R::new(((self.bits >> 4) & 0x01) != 0)
+        PMMREGOFF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 7 - PMM Global High Power Module Request Enable"]
     #[inline(always)]
     pub fn pmmhpmre(&self) -> PMMHPMRE_R {
-        PMMHPMRE_R::new(((self.bits >> 7) & 0x01) != 0)
+        PMMHPMRE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - PMM Core Voltage Bit: 0"]
     #[inline(always)]
-    pub fn pmmcorev(&mut self) -> PMMCOREV_W {
-        PMMCOREV_W { w: self }
+    #[must_use]
+    pub fn pmmcorev(&mut self) -> PMMCOREV_W<0> {
+        PMMCOREV_W::new(self)
     }
     #[doc = "Bit 2 - PMM Software BOR"]
     #[inline(always)]
-    pub fn pmmswbor(&mut self) -> PMMSWBOR_W {
-        PMMSWBOR_W { w: self }
+    #[must_use]
+    pub fn pmmswbor(&mut self) -> PMMSWBOR_W<2> {
+        PMMSWBOR_W::new(self)
     }
     #[doc = "Bit 3 - PMM Software POR"]
     #[inline(always)]
-    pub fn pmmswpor(&mut self) -> PMMSWPOR_W {
-        PMMSWPOR_W { w: self }
+    #[must_use]
+    pub fn pmmswpor(&mut self) -> PMMSWPOR_W<3> {
+        PMMSWPOR_W::new(self)
     }
     #[doc = "Bit 4 - PMM Turn Regulator off"]
     #[inline(always)]
-    pub fn pmmregoff(&mut self) -> PMMREGOFF_W {
-        PMMREGOFF_W { w: self }
+    #[must_use]
+    pub fn pmmregoff(&mut self) -> PMMREGOFF_W<4> {
+        PMMREGOFF_W::new(self)
     }
     #[doc = "Bit 7 - PMM Global High Power Module Request Enable"]
     #[inline(always)]
-    pub fn pmmhpmre(&mut self) -> PMMHPMRE_W {
-        PMMHPMRE_W { w: self }
+    #[must_use]
+    pub fn pmmhpmre(&mut self) -> PMMHPMRE_W<7> {
+        PMMHPMRE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -356,11 +206,10 @@ impl crate::Readable for PMMCTL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmmctl0::W](W) writer structure"]
 impl crate::Writable for PMMCTL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMMCTL0 to value 0"]
 impl crate::Resettable for PMMCTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

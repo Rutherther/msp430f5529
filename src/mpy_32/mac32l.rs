@@ -54,11 +54,10 @@ impl crate::Readable for MAC32L_SPEC {
 #[doc = "`write(|w| ..)` method takes [mac32l::W](W) writer structure"]
 impl crate::Writable for MAC32L_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAC32L to value 0"]
 impl crate::Resettable for MAC32L_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

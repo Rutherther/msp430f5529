@@ -35,195 +35,67 @@ impl From<crate::W<PJIN_SPEC>> for W {
     }
 }
 #[doc = "Field `PJIN0` reader - PJIN0"]
-pub struct PJIN0_R(crate::FieldReader<bool, bool>);
-impl PJIN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJIN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJIN0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJIN0_R = crate::BitReader<bool>;
 #[doc = "Field `PJIN0` writer - PJIN0"]
-pub struct PJIN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJIN0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type PJIN0_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJIN_SPEC, bool, O>;
 #[doc = "Field `PJIN1` reader - PJIN1"]
-pub struct PJIN1_R(crate::FieldReader<bool, bool>);
-impl PJIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJIN1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJIN1_R = crate::BitReader<bool>;
 #[doc = "Field `PJIN1` writer - PJIN1"]
-pub struct PJIN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJIN1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PJIN1_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJIN_SPEC, bool, O>;
 #[doc = "Field `PJIN2` reader - PJIN2"]
-pub struct PJIN2_R(crate::FieldReader<bool, bool>);
-impl PJIN2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJIN2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJIN2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJIN2_R = crate::BitReader<bool>;
 #[doc = "Field `PJIN2` writer - PJIN2"]
-pub struct PJIN2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJIN2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PJIN2_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJIN_SPEC, bool, O>;
 #[doc = "Field `PJIN3` reader - PJIN3"]
-pub struct PJIN3_R(crate::FieldReader<bool, bool>);
-impl PJIN3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJIN3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJIN3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJIN3_R = crate::BitReader<bool>;
 #[doc = "Field `PJIN3` writer - PJIN3"]
-pub struct PJIN3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJIN3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PJIN3_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJIN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PJIN0"]
     #[inline(always)]
     pub fn pjin0(&self) -> PJIN0_R {
-        PJIN0_R::new((self.bits & 0x01) != 0)
+        PJIN0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - PJIN1"]
     #[inline(always)]
     pub fn pjin1(&self) -> PJIN1_R {
-        PJIN1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PJIN1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - PJIN2"]
     #[inline(always)]
     pub fn pjin2(&self) -> PJIN2_R {
-        PJIN2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PJIN2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PJIN3"]
     #[inline(always)]
     pub fn pjin3(&self) -> PJIN3_R {
-        PJIN3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PJIN3_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PJIN0"]
     #[inline(always)]
-    pub fn pjin0(&mut self) -> PJIN0_W {
-        PJIN0_W { w: self }
+    #[must_use]
+    pub fn pjin0(&mut self) -> PJIN0_W<0> {
+        PJIN0_W::new(self)
     }
     #[doc = "Bit 1 - PJIN1"]
     #[inline(always)]
-    pub fn pjin1(&mut self) -> PJIN1_W {
-        PJIN1_W { w: self }
+    #[must_use]
+    pub fn pjin1(&mut self) -> PJIN1_W<1> {
+        PJIN1_W::new(self)
     }
     #[doc = "Bit 2 - PJIN2"]
     #[inline(always)]
-    pub fn pjin2(&mut self) -> PJIN2_W {
-        PJIN2_W { w: self }
+    #[must_use]
+    pub fn pjin2(&mut self) -> PJIN2_W<2> {
+        PJIN2_W::new(self)
     }
     #[doc = "Bit 3 - PJIN3"]
     #[inline(always)]
-    pub fn pjin3(&mut self) -> PJIN3_W {
-        PJIN3_W { w: self }
+    #[must_use]
+    pub fn pjin3(&mut self) -> PJIN3_W<3> {
+        PJIN3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for PJIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pjin::W](W) writer structure"]
 impl crate::Writable for PJIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PJIN to value 0"]
 impl crate::Resettable for PJIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

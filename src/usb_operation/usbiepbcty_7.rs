@@ -54,11 +54,10 @@ impl crate::Readable for USBIEPBCTY_7_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbiepbcty_7::W](W) writer structure"]
 impl crate::Writable for USBIEPBCTY_7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBIEPBCTY_7 to value 0"]
 impl crate::Resettable for USBIEPBCTY_7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,336 +35,112 @@ impl From<crate::W<RTCSEC_SPEC>> for W {
     }
 }
 #[doc = "Field `SECONDS0` reader - Real Time Clock Seconds Bit: 0"]
-pub struct SECONDS0_R(crate::FieldReader<bool, bool>);
-impl SECONDS0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS0_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS0` writer - Real Time Clock Seconds Bit: 0"]
-pub struct SECONDS0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type SECONDS0_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS1` reader - Real Time Clock Seconds Bit: 1"]
-pub struct SECONDS1_R(crate::FieldReader<bool, bool>);
-impl SECONDS1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS1_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS1` writer - Real Time Clock Seconds Bit: 1"]
-pub struct SECONDS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SECONDS1_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS2` reader - Real Time Clock Seconds Bit: 2"]
-pub struct SECONDS2_R(crate::FieldReader<bool, bool>);
-impl SECONDS2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS2_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS2` writer - Real Time Clock Seconds Bit: 2"]
-pub struct SECONDS2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
+pub type SECONDS2_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS3` reader - Real Time Clock Seconds Bit: 3"]
-pub struct SECONDS3_R(crate::FieldReader<bool, bool>);
-impl SECONDS3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS3_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS3` writer - Real Time Clock Seconds Bit: 3"]
-pub struct SECONDS3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SECONDS3_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS4` reader - Real Time Clock Seconds Bit: 4"]
-pub struct SECONDS4_R(crate::FieldReader<bool, bool>);
-impl SECONDS4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS4_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS4` writer - Real Time Clock Seconds Bit: 4"]
-pub struct SECONDS4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
+pub type SECONDS4_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS5` reader - Real Time Clock Seconds Bit: 5"]
-pub struct SECONDS5_R(crate::FieldReader<bool, bool>);
-impl SECONDS5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS5_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS5` writer - Real Time Clock Seconds Bit: 5"]
-pub struct SECONDS5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type SECONDS5_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 #[doc = "Field `SECONDS6` reader - Real Time Clock Seconds Bit: 6"]
-pub struct SECONDS6_R(crate::FieldReader<bool, bool>);
-impl SECONDS6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECONDS6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECONDS6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECONDS6_R = crate::BitReader<bool>;
 #[doc = "Field `SECONDS6` writer - Real Time Clock Seconds Bit: 6"]
-pub struct SECONDS6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SECONDS6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
+pub type SECONDS6_W<'a, const O: u8> = crate::BitWriter<'a, u8, RTCSEC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Real Time Clock Seconds Bit: 0"]
     #[inline(always)]
     pub fn seconds0(&self) -> SECONDS0_R {
-        SECONDS0_R::new((self.bits & 0x01) != 0)
+        SECONDS0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Real Time Clock Seconds Bit: 1"]
     #[inline(always)]
     pub fn seconds1(&self) -> SECONDS1_R {
-        SECONDS1_R::new(((self.bits >> 1) & 0x01) != 0)
+        SECONDS1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Real Time Clock Seconds Bit: 2"]
     #[inline(always)]
     pub fn seconds2(&self) -> SECONDS2_R {
-        SECONDS2_R::new(((self.bits >> 2) & 0x01) != 0)
+        SECONDS2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Real Time Clock Seconds Bit: 3"]
     #[inline(always)]
     pub fn seconds3(&self) -> SECONDS3_R {
-        SECONDS3_R::new(((self.bits >> 3) & 0x01) != 0)
+        SECONDS3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Real Time Clock Seconds Bit: 4"]
     #[inline(always)]
     pub fn seconds4(&self) -> SECONDS4_R {
-        SECONDS4_R::new(((self.bits >> 4) & 0x01) != 0)
+        SECONDS4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Real Time Clock Seconds Bit: 5"]
     #[inline(always)]
     pub fn seconds5(&self) -> SECONDS5_R {
-        SECONDS5_R::new(((self.bits >> 5) & 0x01) != 0)
+        SECONDS5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Real Time Clock Seconds Bit: 6"]
     #[inline(always)]
     pub fn seconds6(&self) -> SECONDS6_R {
-        SECONDS6_R::new(((self.bits >> 6) & 0x01) != 0)
+        SECONDS6_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Real Time Clock Seconds Bit: 0"]
     #[inline(always)]
-    pub fn seconds0(&mut self) -> SECONDS0_W {
-        SECONDS0_W { w: self }
+    #[must_use]
+    pub fn seconds0(&mut self) -> SECONDS0_W<0> {
+        SECONDS0_W::new(self)
     }
     #[doc = "Bit 1 - Real Time Clock Seconds Bit: 1"]
     #[inline(always)]
-    pub fn seconds1(&mut self) -> SECONDS1_W {
-        SECONDS1_W { w: self }
+    #[must_use]
+    pub fn seconds1(&mut self) -> SECONDS1_W<1> {
+        SECONDS1_W::new(self)
     }
     #[doc = "Bit 2 - Real Time Clock Seconds Bit: 2"]
     #[inline(always)]
-    pub fn seconds2(&mut self) -> SECONDS2_W {
-        SECONDS2_W { w: self }
+    #[must_use]
+    pub fn seconds2(&mut self) -> SECONDS2_W<2> {
+        SECONDS2_W::new(self)
     }
     #[doc = "Bit 3 - Real Time Clock Seconds Bit: 3"]
     #[inline(always)]
-    pub fn seconds3(&mut self) -> SECONDS3_W {
-        SECONDS3_W { w: self }
+    #[must_use]
+    pub fn seconds3(&mut self) -> SECONDS3_W<3> {
+        SECONDS3_W::new(self)
     }
     #[doc = "Bit 4 - Real Time Clock Seconds Bit: 4"]
     #[inline(always)]
-    pub fn seconds4(&mut self) -> SECONDS4_W {
-        SECONDS4_W { w: self }
+    #[must_use]
+    pub fn seconds4(&mut self) -> SECONDS4_W<4> {
+        SECONDS4_W::new(self)
     }
     #[doc = "Bit 5 - Real Time Clock Seconds Bit: 5"]
     #[inline(always)]
-    pub fn seconds5(&mut self) -> SECONDS5_W {
-        SECONDS5_W { w: self }
+    #[must_use]
+    pub fn seconds5(&mut self) -> SECONDS5_W<5> {
+        SECONDS5_W::new(self)
     }
     #[doc = "Bit 6 - Real Time Clock Seconds Bit: 6"]
     #[inline(always)]
-    pub fn seconds6(&mut self) -> SECONDS6_W {
-        SECONDS6_W { w: self }
+    #[must_use]
+    pub fn seconds6(&mut self) -> SECONDS6_W<6> {
+        SECONDS6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -385,11 +161,10 @@ impl crate::Readable for RTCSEC_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtcsec::W](W) writer structure"]
 impl crate::Writable for RTCSEC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTCSEC to value 0"]
 impl crate::Resettable for RTCSEC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

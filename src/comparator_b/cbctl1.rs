@@ -35,229 +35,33 @@ impl From<crate::W<CBCTL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CBOUT` reader - Comp. B Output"]
-pub struct CBOUT_R(crate::FieldReader<bool, bool>);
-impl CBOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBOUT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBOUT_R = crate::BitReader<bool>;
 #[doc = "Field `CBOUT` writer - Comp. B Output"]
-pub struct CBOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBOUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type CBOUT_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBOUTPOL` reader - Comp. B Output Polarity"]
-pub struct CBOUTPOL_R(crate::FieldReader<bool, bool>);
-impl CBOUTPOL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBOUTPOL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBOUTPOL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBOUTPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CBOUTPOL` writer - Comp. B Output Polarity"]
-pub struct CBOUTPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBOUTPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type CBOUTPOL_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBF` reader - Comp. B Enable Output Filter"]
-pub struct CBF_R(crate::FieldReader<bool, bool>);
-impl CBF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBF_R = crate::BitReader<bool>;
 #[doc = "Field `CBF` writer - Comp. B Enable Output Filter"]
-pub struct CBF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type CBF_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBIES` reader - Comp. B Interrupt Edge Select"]
-pub struct CBIES_R(crate::FieldReader<bool, bool>);
-impl CBIES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBIES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBIES_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBIES_R = crate::BitReader<bool>;
 #[doc = "Field `CBIES` writer - Comp. B Interrupt Edge Select"]
-pub struct CBIES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBIES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type CBIES_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBSHORT` reader - Comp. B Input Short"]
-pub struct CBSHORT_R(crate::FieldReader<bool, bool>);
-impl CBSHORT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBSHORT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBSHORT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBSHORT_R = crate::BitReader<bool>;
 #[doc = "Field `CBSHORT` writer - Comp. B Input Short"]
-pub struct CBSHORT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBSHORT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type CBSHORT_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBEX` reader - Comp. B Exchange Inputs"]
-pub struct CBEX_R(crate::FieldReader<bool, bool>);
-impl CBEX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBEX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBEX_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBEX_R = crate::BitReader<bool>;
 #[doc = "Field `CBEX` writer - Comp. B Exchange Inputs"]
-pub struct CBEX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBEX_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type CBEX_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
+#[doc = "Field `CBFDLY` reader - Comp. B Filter delay Bit 0"]
+pub type CBFDLY_R = crate::FieldReader<u8, CBFDLY_A>;
 #[doc = "Comp. B Filter delay Bit 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBFDLY_A {
     #[doc = "0: Comp. B Filter delay 0 : 450ns"]
@@ -275,14 +79,8 @@ impl From<CBFDLY_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBFDLY` reader - Comp. B Filter delay Bit 0"]
-pub struct CBFDLY_R(crate::FieldReader<u8, CBFDLY_A>);
 impl CBFDLY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBFDLY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBFDLY_A {
         match self.bits {
@@ -296,41 +94,28 @@ impl CBFDLY_R {
     #[doc = "Checks if the value of the field is `CBFDLY_0`"]
     #[inline(always)]
     pub fn is_cbfdly_0(&self) -> bool {
-        **self == CBFDLY_A::CBFDLY_0
+        *self == CBFDLY_A::CBFDLY_0
     }
     #[doc = "Checks if the value of the field is `CBFDLY_1`"]
     #[inline(always)]
     pub fn is_cbfdly_1(&self) -> bool {
-        **self == CBFDLY_A::CBFDLY_1
+        *self == CBFDLY_A::CBFDLY_1
     }
     #[doc = "Checks if the value of the field is `CBFDLY_2`"]
     #[inline(always)]
     pub fn is_cbfdly_2(&self) -> bool {
-        **self == CBFDLY_A::CBFDLY_2
+        *self == CBFDLY_A::CBFDLY_2
     }
     #[doc = "Checks if the value of the field is `CBFDLY_3`"]
     #[inline(always)]
     pub fn is_cbfdly_3(&self) -> bool {
-        **self == CBFDLY_A::CBFDLY_3
-    }
-}
-impl core::ops::Deref for CBFDLY_R {
-    type Target = crate::FieldReader<u8, CBFDLY_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBFDLY_A::CBFDLY_3
     }
 }
 #[doc = "Field `CBFDLY` writer - Comp. B Filter delay Bit 0"]
-pub struct CBFDLY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBFDLY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBFDLY_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBFDLY_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, CBCTL1_SPEC, u8, CBFDLY_A, 2, O>;
+impl<'a, const O: u8> CBFDLY_W<'a, O> {
     #[doc = "Comp. B Filter delay 0 : 450ns"]
     #[inline(always)]
     pub fn cbfdly_0(self) -> &'a mut W {
@@ -351,15 +136,11 @@ impl<'a> CBFDLY_W<'a> {
     pub fn cbfdly_3(self) -> &'a mut W {
         self.variant(CBFDLY_A::CBFDLY_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u16 & 0x03) << 6);
-        self.w
-    }
 }
+#[doc = "Field `CBPWRMD` reader - Comp. B Power Mode Bit 0"]
+pub type CBPWRMD_R = crate::FieldReader<u8, CBPWRMD_A>;
 #[doc = "Comp. B Power Mode Bit 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBPWRMD_A {
     #[doc = "0: Comp. B Power Mode 0 : High speed"]
@@ -377,14 +158,8 @@ impl From<CBPWRMD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBPWRMD` reader - Comp. B Power Mode Bit 0"]
-pub struct CBPWRMD_R(crate::FieldReader<u8, CBPWRMD_A>);
 impl CBPWRMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBPWRMD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBPWRMD_A {
         match self.bits {
@@ -398,41 +173,28 @@ impl CBPWRMD_R {
     #[doc = "Checks if the value of the field is `CBPWRMD_0`"]
     #[inline(always)]
     pub fn is_cbpwrmd_0(&self) -> bool {
-        **self == CBPWRMD_A::CBPWRMD_0
+        *self == CBPWRMD_A::CBPWRMD_0
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_1`"]
     #[inline(always)]
     pub fn is_cbpwrmd_1(&self) -> bool {
-        **self == CBPWRMD_A::CBPWRMD_1
+        *self == CBPWRMD_A::CBPWRMD_1
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_2`"]
     #[inline(always)]
     pub fn is_cbpwrmd_2(&self) -> bool {
-        **self == CBPWRMD_A::CBPWRMD_2
+        *self == CBPWRMD_A::CBPWRMD_2
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_3`"]
     #[inline(always)]
     pub fn is_cbpwrmd_3(&self) -> bool {
-        **self == CBPWRMD_A::CBPWRMD_3
-    }
-}
-impl core::ops::Deref for CBPWRMD_R {
-    type Target = crate::FieldReader<u8, CBPWRMD_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBPWRMD_A::CBPWRMD_3
     }
 }
 #[doc = "Field `CBPWRMD` writer - Comp. B Power Mode Bit 0"]
-pub struct CBPWRMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBPWRMD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBPWRMD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBPWRMD_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, CBCTL1_SPEC, u8, CBPWRMD_A, 2, O>;
+impl<'a, const O: u8> CBPWRMD_W<'a, O> {
     #[doc = "Comp. B Power Mode 0 : High speed"]
     #[inline(always)]
     pub fn cbpwrmd_0(self) -> &'a mut W {
@@ -453,236 +215,142 @@ impl<'a> CBPWRMD_W<'a> {
     pub fn cbpwrmd_3(self) -> &'a mut W {
         self.variant(CBPWRMD_A::CBPWRMD_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u16 & 0x03) << 8);
-        self.w
-    }
 }
 #[doc = "Field `CBON` reader - Comp. B enable"]
-pub struct CBON_R(crate::FieldReader<bool, bool>);
-impl CBON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBON_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBON_R = crate::BitReader<bool>;
 #[doc = "Field `CBON` writer - Comp. B enable"]
-pub struct CBON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u16 & 0x01) << 10);
-        self.w
-    }
-}
+pub type CBON_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBMRVL` reader - Comp. B CBMRV Level"]
-pub struct CBMRVL_R(crate::FieldReader<bool, bool>);
-impl CBMRVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBMRVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBMRVL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBMRVL_R = crate::BitReader<bool>;
 #[doc = "Field `CBMRVL` writer - Comp. B CBMRV Level"]
-pub struct CBMRVL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBMRVL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
-        self.w
-    }
-}
+pub type CBMRVL_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 #[doc = "Field `CBMRVS` reader - Comp. B Output selects between VREF0 or VREF1"]
-pub struct CBMRVS_R(crate::FieldReader<bool, bool>);
-impl CBMRVS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBMRVS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBMRVS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBMRVS_R = crate::BitReader<bool>;
 #[doc = "Field `CBMRVS` writer - Comp. B Output selects between VREF0 or VREF1"]
-pub struct CBMRVS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBMRVS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u16 & 0x01) << 12);
-        self.w
-    }
-}
+pub type CBMRVS_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Comp. B Output"]
     #[inline(always)]
     pub fn cbout(&self) -> CBOUT_R {
-        CBOUT_R::new((self.bits & 0x01) != 0)
+        CBOUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Comp. B Output Polarity"]
     #[inline(always)]
     pub fn cboutpol(&self) -> CBOUTPOL_R {
-        CBOUTPOL_R::new(((self.bits >> 1) & 0x01) != 0)
+        CBOUTPOL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Comp. B Enable Output Filter"]
     #[inline(always)]
     pub fn cbf(&self) -> CBF_R {
-        CBF_R::new(((self.bits >> 2) & 0x01) != 0)
+        CBF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Comp. B Interrupt Edge Select"]
     #[inline(always)]
     pub fn cbies(&self) -> CBIES_R {
-        CBIES_R::new(((self.bits >> 3) & 0x01) != 0)
+        CBIES_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Comp. B Input Short"]
     #[inline(always)]
     pub fn cbshort(&self) -> CBSHORT_R {
-        CBSHORT_R::new(((self.bits >> 4) & 0x01) != 0)
+        CBSHORT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Comp. B Exchange Inputs"]
     #[inline(always)]
     pub fn cbex(&self) -> CBEX_R {
-        CBEX_R::new(((self.bits >> 5) & 0x01) != 0)
+        CBEX_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Comp. B Filter delay Bit 0"]
     #[inline(always)]
     pub fn cbfdly(&self) -> CBFDLY_R {
-        CBFDLY_R::new(((self.bits >> 6) & 0x03) as u8)
+        CBFDLY_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Comp. B Power Mode Bit 0"]
     #[inline(always)]
     pub fn cbpwrmd(&self) -> CBPWRMD_R {
-        CBPWRMD_R::new(((self.bits >> 8) & 0x03) as u8)
+        CBPWRMD_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 10 - Comp. B enable"]
     #[inline(always)]
     pub fn cbon(&self) -> CBON_R {
-        CBON_R::new(((self.bits >> 10) & 0x01) != 0)
+        CBON_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Comp. B CBMRV Level"]
     #[inline(always)]
     pub fn cbmrvl(&self) -> CBMRVL_R {
-        CBMRVL_R::new(((self.bits >> 11) & 0x01) != 0)
+        CBMRVL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Comp. B Output selects between VREF0 or VREF1"]
     #[inline(always)]
     pub fn cbmrvs(&self) -> CBMRVS_R {
-        CBMRVS_R::new(((self.bits >> 12) & 0x01) != 0)
+        CBMRVS_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Comp. B Output"]
     #[inline(always)]
-    pub fn cbout(&mut self) -> CBOUT_W {
-        CBOUT_W { w: self }
+    #[must_use]
+    pub fn cbout(&mut self) -> CBOUT_W<0> {
+        CBOUT_W::new(self)
     }
     #[doc = "Bit 1 - Comp. B Output Polarity"]
     #[inline(always)]
-    pub fn cboutpol(&mut self) -> CBOUTPOL_W {
-        CBOUTPOL_W { w: self }
+    #[must_use]
+    pub fn cboutpol(&mut self) -> CBOUTPOL_W<1> {
+        CBOUTPOL_W::new(self)
     }
     #[doc = "Bit 2 - Comp. B Enable Output Filter"]
     #[inline(always)]
-    pub fn cbf(&mut self) -> CBF_W {
-        CBF_W { w: self }
+    #[must_use]
+    pub fn cbf(&mut self) -> CBF_W<2> {
+        CBF_W::new(self)
     }
     #[doc = "Bit 3 - Comp. B Interrupt Edge Select"]
     #[inline(always)]
-    pub fn cbies(&mut self) -> CBIES_W {
-        CBIES_W { w: self }
+    #[must_use]
+    pub fn cbies(&mut self) -> CBIES_W<3> {
+        CBIES_W::new(self)
     }
     #[doc = "Bit 4 - Comp. B Input Short"]
     #[inline(always)]
-    pub fn cbshort(&mut self) -> CBSHORT_W {
-        CBSHORT_W { w: self }
+    #[must_use]
+    pub fn cbshort(&mut self) -> CBSHORT_W<4> {
+        CBSHORT_W::new(self)
     }
     #[doc = "Bit 5 - Comp. B Exchange Inputs"]
     #[inline(always)]
-    pub fn cbex(&mut self) -> CBEX_W {
-        CBEX_W { w: self }
+    #[must_use]
+    pub fn cbex(&mut self) -> CBEX_W<5> {
+        CBEX_W::new(self)
     }
     #[doc = "Bits 6:7 - Comp. B Filter delay Bit 0"]
     #[inline(always)]
-    pub fn cbfdly(&mut self) -> CBFDLY_W {
-        CBFDLY_W { w: self }
+    #[must_use]
+    pub fn cbfdly(&mut self) -> CBFDLY_W<6> {
+        CBFDLY_W::new(self)
     }
     #[doc = "Bits 8:9 - Comp. B Power Mode Bit 0"]
     #[inline(always)]
-    pub fn cbpwrmd(&mut self) -> CBPWRMD_W {
-        CBPWRMD_W { w: self }
+    #[must_use]
+    pub fn cbpwrmd(&mut self) -> CBPWRMD_W<8> {
+        CBPWRMD_W::new(self)
     }
     #[doc = "Bit 10 - Comp. B enable"]
     #[inline(always)]
-    pub fn cbon(&mut self) -> CBON_W {
-        CBON_W { w: self }
+    #[must_use]
+    pub fn cbon(&mut self) -> CBON_W<10> {
+        CBON_W::new(self)
     }
     #[doc = "Bit 11 - Comp. B CBMRV Level"]
     #[inline(always)]
-    pub fn cbmrvl(&mut self) -> CBMRVL_W {
-        CBMRVL_W { w: self }
+    #[must_use]
+    pub fn cbmrvl(&mut self) -> CBMRVL_W<11> {
+        CBMRVL_W::new(self)
     }
     #[doc = "Bit 12 - Comp. B Output selects between VREF0 or VREF1"]
     #[inline(always)]
-    pub fn cbmrvs(&mut self) -> CBMRVS_W {
-        CBMRVS_W { w: self }
+    #[must_use]
+    pub fn cbmrvs(&mut self) -> CBMRVS_W<12> {
+        CBMRVS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -703,11 +371,10 @@ impl crate::Readable for CBCTL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cbctl1::W](W) writer structure"]
 impl crate::Writable for CBCTL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CBCTL1 to value 0"]
 impl crate::Resettable for CBCTL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

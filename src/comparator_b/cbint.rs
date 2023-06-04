@@ -35,195 +35,67 @@ impl From<crate::W<CBINT_SPEC>> for W {
     }
 }
 #[doc = "Field `CBIFG` reader - Comp. B Interrupt Flag"]
-pub struct CBIFG_R(crate::FieldReader<bool, bool>);
-impl CBIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBIFG_R = crate::BitReader<bool>;
 #[doc = "Field `CBIFG` writer - Comp. B Interrupt Flag"]
-pub struct CBIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type CBIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBINT_SPEC, bool, O>;
 #[doc = "Field `CBIIFG` reader - Comp. B Interrupt Flag Inverted Polarity"]
-pub struct CBIIFG_R(crate::FieldReader<bool, bool>);
-impl CBIIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBIIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBIIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBIIFG_R = crate::BitReader<bool>;
 #[doc = "Field `CBIIFG` writer - Comp. B Interrupt Flag Inverted Polarity"]
-pub struct CBIIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBIIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type CBIIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBINT_SPEC, bool, O>;
 #[doc = "Field `CBIE` reader - Comp. B Interrupt Enable"]
-pub struct CBIE_R(crate::FieldReader<bool, bool>);
-impl CBIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBIE_R = crate::BitReader<bool>;
 #[doc = "Field `CBIE` writer - Comp. B Interrupt Enable"]
-pub struct CBIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
-        self.w
-    }
-}
+pub type CBIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBINT_SPEC, bool, O>;
 #[doc = "Field `CBIIE` reader - Comp. B Interrupt Enable Inverted Polarity"]
-pub struct CBIIE_R(crate::FieldReader<bool, bool>);
-impl CBIIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBIIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBIIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBIIE_R = crate::BitReader<bool>;
 #[doc = "Field `CBIIE` writer - Comp. B Interrupt Enable Inverted Polarity"]
-pub struct CBIIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBIIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u16 & 0x01) << 9);
-        self.w
-    }
-}
+pub type CBIIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBINT_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Comp. B Interrupt Flag"]
     #[inline(always)]
     pub fn cbifg(&self) -> CBIFG_R {
-        CBIFG_R::new((self.bits & 0x01) != 0)
+        CBIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Comp. B Interrupt Flag Inverted Polarity"]
     #[inline(always)]
     pub fn cbiifg(&self) -> CBIIFG_R {
-        CBIIFG_R::new(((self.bits >> 1) & 0x01) != 0)
+        CBIIFG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8 - Comp. B Interrupt Enable"]
     #[inline(always)]
     pub fn cbie(&self) -> CBIE_R {
-        CBIE_R::new(((self.bits >> 8) & 0x01) != 0)
+        CBIE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Comp. B Interrupt Enable Inverted Polarity"]
     #[inline(always)]
     pub fn cbiie(&self) -> CBIIE_R {
-        CBIIE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CBIIE_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Comp. B Interrupt Flag"]
     #[inline(always)]
-    pub fn cbifg(&mut self) -> CBIFG_W {
-        CBIFG_W { w: self }
+    #[must_use]
+    pub fn cbifg(&mut self) -> CBIFG_W<0> {
+        CBIFG_W::new(self)
     }
     #[doc = "Bit 1 - Comp. B Interrupt Flag Inverted Polarity"]
     #[inline(always)]
-    pub fn cbiifg(&mut self) -> CBIIFG_W {
-        CBIIFG_W { w: self }
+    #[must_use]
+    pub fn cbiifg(&mut self) -> CBIIFG_W<1> {
+        CBIIFG_W::new(self)
     }
     #[doc = "Bit 8 - Comp. B Interrupt Enable"]
     #[inline(always)]
-    pub fn cbie(&mut self) -> CBIE_W {
-        CBIE_W { w: self }
+    #[must_use]
+    pub fn cbie(&mut self) -> CBIE_W<8> {
+        CBIE_W::new(self)
     }
     #[doc = "Bit 9 - Comp. B Interrupt Enable Inverted Polarity"]
     #[inline(always)]
-    pub fn cbiie(&mut self) -> CBIIE_W {
-        CBIIE_W { w: self }
+    #[must_use]
+    pub fn cbiie(&mut self) -> CBIIE_W<9> {
+        CBIIE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for CBINT_SPEC {
 #[doc = "`write(|w| ..)` method takes [cbint::W](W) writer structure"]
 impl crate::Writable for CBINT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CBINT to value 0"]
 impl crate::Resettable for CBINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

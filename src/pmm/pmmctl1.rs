@@ -35,148 +35,52 @@ impl From<crate::W<PMMCTL1_SPEC>> for W {
     }
 }
 #[doc = "Field `PMMREFMD` reader - PMM Reference Mode"]
-pub struct PMMREFMD_R(crate::FieldReader<bool, bool>);
-impl PMMREFMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMREFMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMREFMD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMREFMD_R = crate::BitReader<bool>;
 #[doc = "Field `PMMREFMD` writer - PMM Reference Mode"]
-pub struct PMMREFMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMREFMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type PMMREFMD_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL1_SPEC, bool, O>;
 #[doc = "Field `PMMCMD0` reader - PMM Voltage Regulator Current Mode Bit: 0"]
-pub struct PMMCMD0_R(crate::FieldReader<bool, bool>);
-impl PMMCMD0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMCMD0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMCMD0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMCMD0_R = crate::BitReader<bool>;
 #[doc = "Field `PMMCMD0` writer - PMM Voltage Regulator Current Mode Bit: 0"]
-pub struct PMMCMD0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMCMD0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type PMMCMD0_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL1_SPEC, bool, O>;
 #[doc = "Field `PMMCMD1` reader - PMM Voltage Regulator Current Mode Bit: 1"]
-pub struct PMMCMD1_R(crate::FieldReader<bool, bool>);
-impl PMMCMD1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMMCMD1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMMCMD1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMMCMD1_R = crate::BitReader<bool>;
 #[doc = "Field `PMMCMD1` writer - PMM Voltage Regulator Current Mode Bit: 1"]
-pub struct PMMCMD1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMMCMD1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type PMMCMD1_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMMCTL1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PMM Reference Mode"]
     #[inline(always)]
     pub fn pmmrefmd(&self) -> PMMREFMD_R {
-        PMMREFMD_R::new((self.bits & 0x01) != 0)
+        PMMREFMD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4 - PMM Voltage Regulator Current Mode Bit: 0"]
     #[inline(always)]
     pub fn pmmcmd0(&self) -> PMMCMD0_R {
-        PMMCMD0_R::new(((self.bits >> 4) & 0x01) != 0)
+        PMMCMD0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - PMM Voltage Regulator Current Mode Bit: 1"]
     #[inline(always)]
     pub fn pmmcmd1(&self) -> PMMCMD1_R {
-        PMMCMD1_R::new(((self.bits >> 5) & 0x01) != 0)
+        PMMCMD1_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PMM Reference Mode"]
     #[inline(always)]
-    pub fn pmmrefmd(&mut self) -> PMMREFMD_W {
-        PMMREFMD_W { w: self }
+    #[must_use]
+    pub fn pmmrefmd(&mut self) -> PMMREFMD_W<0> {
+        PMMREFMD_W::new(self)
     }
     #[doc = "Bit 4 - PMM Voltage Regulator Current Mode Bit: 0"]
     #[inline(always)]
-    pub fn pmmcmd0(&mut self) -> PMMCMD0_W {
-        PMMCMD0_W { w: self }
+    #[must_use]
+    pub fn pmmcmd0(&mut self) -> PMMCMD0_W<4> {
+        PMMCMD0_W::new(self)
     }
     #[doc = "Bit 5 - PMM Voltage Regulator Current Mode Bit: 1"]
     #[inline(always)]
-    pub fn pmmcmd1(&mut self) -> PMMCMD1_W {
-        PMMCMD1_W { w: self }
+    #[must_use]
+    pub fn pmmcmd1(&mut self) -> PMMCMD1_W<5> {
+        PMMCMD1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -197,11 +101,10 @@ impl crate::Readable for PMMCTL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmmctl1::W](W) writer structure"]
 impl crate::Writable for PMMCTL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMMCTL1 to value 0"]
 impl crate::Resettable for PMMCTL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

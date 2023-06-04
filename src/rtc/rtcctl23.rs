@@ -35,266 +35,37 @@ impl From<crate::W<RTCCTL23_SPEC>> for W {
     }
 }
 #[doc = "Field `RTCCAL0` reader - RTC Calibration Bit 0"]
-pub struct RTCCAL0_R(crate::FieldReader<bool, bool>);
-impl RTCCAL0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL0_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL0` writer - RTC Calibration Bit 0"]
-pub struct RTCCAL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type RTCCAL0_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCAL1` reader - RTC Calibration Bit 1"]
-pub struct RTCCAL1_R(crate::FieldReader<bool, bool>);
-impl RTCCAL1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL1_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL1` writer - RTC Calibration Bit 1"]
-pub struct RTCCAL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RTCCAL1_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCAL2` reader - RTC Calibration Bit 2"]
-pub struct RTCCAL2_R(crate::FieldReader<bool, bool>);
-impl RTCCAL2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL2_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL2` writer - RTC Calibration Bit 2"]
-pub struct RTCCAL2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RTCCAL2_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCAL3` reader - RTC Calibration Bit 3"]
-pub struct RTCCAL3_R(crate::FieldReader<bool, bool>);
-impl RTCCAL3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL3_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL3` writer - RTC Calibration Bit 3"]
-pub struct RTCCAL3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type RTCCAL3_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCAL4` reader - RTC Calibration Bit 4"]
-pub struct RTCCAL4_R(crate::FieldReader<bool, bool>);
-impl RTCCAL4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL4_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL4` writer - RTC Calibration Bit 4"]
-pub struct RTCCAL4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type RTCCAL4_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCAL5` reader - RTC Calibration Bit 5"]
-pub struct RTCCAL5_R(crate::FieldReader<bool, bool>);
-impl RTCCAL5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCAL5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCAL5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCAL5_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCAL5` writer - RTC Calibration Bit 5"]
-pub struct RTCCAL5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCAL5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type RTCCAL5_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
 #[doc = "Field `RTCCALS` reader - RTC Calibration Sign"]
-pub struct RTCCALS_R(crate::FieldReader<bool, bool>);
-impl RTCCALS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTCCALS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTCCALS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTCCALS_R = crate::BitReader<bool>;
 #[doc = "Field `RTCCALS` writer - RTC Calibration Sign"]
-pub struct RTCCALS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCALS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type RTCCALS_W<'a, const O: u8> = crate::BitWriter<'a, u16, RTCCTL23_SPEC, bool, O>;
+#[doc = "Field `RTCCALF` reader - RTC Calibration Frequency Bit 1"]
+pub type RTCCALF_R = crate::FieldReader<u8, RTCCALF_A>;
 #[doc = "RTC Calibration Frequency Bit 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum RTCCALF_A {
     #[doc = "0: RTC Calibration Frequency: No Output"]
@@ -312,14 +83,8 @@ impl From<RTCCALF_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `RTCCALF` reader - RTC Calibration Frequency Bit 1"]
-pub struct RTCCALF_R(crate::FieldReader<u8, RTCCALF_A>);
 impl RTCCALF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTCCALF_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> RTCCALF_A {
         match self.bits {
@@ -333,41 +98,28 @@ impl RTCCALF_R {
     #[doc = "Checks if the value of the field is `RTCCALF_0`"]
     #[inline(always)]
     pub fn is_rtccalf_0(&self) -> bool {
-        **self == RTCCALF_A::RTCCALF_0
+        *self == RTCCALF_A::RTCCALF_0
     }
     #[doc = "Checks if the value of the field is `RTCCALF_1`"]
     #[inline(always)]
     pub fn is_rtccalf_1(&self) -> bool {
-        **self == RTCCALF_A::RTCCALF_1
+        *self == RTCCALF_A::RTCCALF_1
     }
     #[doc = "Checks if the value of the field is `RTCCALF_2`"]
     #[inline(always)]
     pub fn is_rtccalf_2(&self) -> bool {
-        **self == RTCCALF_A::RTCCALF_2
+        *self == RTCCALF_A::RTCCALF_2
     }
     #[doc = "Checks if the value of the field is `RTCCALF_3`"]
     #[inline(always)]
     pub fn is_rtccalf_3(&self) -> bool {
-        **self == RTCCALF_A::RTCCALF_3
-    }
-}
-impl core::ops::Deref for RTCCALF_R {
-    type Target = crate::FieldReader<u8, RTCCALF_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == RTCCALF_A::RTCCALF_3
     }
 }
 #[doc = "Field `RTCCALF` writer - RTC Calibration Frequency Bit 1"]
-pub struct RTCCALF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTCCALF_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RTCCALF_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type RTCCALF_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, RTCCTL23_SPEC, u8, RTCCALF_A, 2, O>;
+impl<'a, const O: u8> RTCCALF_W<'a, O> {
     #[doc = "RTC Calibration Frequency: No Output"]
     #[inline(always)]
     pub fn rtccalf_0(self) -> &'a mut W {
@@ -388,95 +140,97 @@ impl<'a> RTCCALF_W<'a> {
     pub fn rtccalf_3(self) -> &'a mut W {
         self.variant(RTCCALF_A::RTCCALF_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u16 & 0x03) << 8);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - RTC Calibration Bit 0"]
     #[inline(always)]
     pub fn rtccal0(&self) -> RTCCAL0_R {
-        RTCCAL0_R::new((self.bits & 0x01) != 0)
+        RTCCAL0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTC Calibration Bit 1"]
     #[inline(always)]
     pub fn rtccal1(&self) -> RTCCAL1_R {
-        RTCCAL1_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTCCAL1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Calibration Bit 2"]
     #[inline(always)]
     pub fn rtccal2(&self) -> RTCCAL2_R {
-        RTCCAL2_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTCCAL2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC Calibration Bit 3"]
     #[inline(always)]
     pub fn rtccal3(&self) -> RTCCAL3_R {
-        RTCCAL3_R::new(((self.bits >> 3) & 0x01) != 0)
+        RTCCAL3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC Calibration Bit 4"]
     #[inline(always)]
     pub fn rtccal4(&self) -> RTCCAL4_R {
-        RTCCAL4_R::new(((self.bits >> 4) & 0x01) != 0)
+        RTCCAL4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RTC Calibration Bit 5"]
     #[inline(always)]
     pub fn rtccal5(&self) -> RTCCAL5_R {
-        RTCCAL5_R::new(((self.bits >> 5) & 0x01) != 0)
+        RTCCAL5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - RTC Calibration Sign"]
     #[inline(always)]
     pub fn rtccals(&self) -> RTCCALS_R {
-        RTCCALS_R::new(((self.bits >> 7) & 0x01) != 0)
+        RTCCALS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:9 - RTC Calibration Frequency Bit 1"]
     #[inline(always)]
     pub fn rtccalf(&self) -> RTCCALF_R {
-        RTCCALF_R::new(((self.bits >> 8) & 0x03) as u8)
+        RTCCALF_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - RTC Calibration Bit 0"]
     #[inline(always)]
-    pub fn rtccal0(&mut self) -> RTCCAL0_W {
-        RTCCAL0_W { w: self }
+    #[must_use]
+    pub fn rtccal0(&mut self) -> RTCCAL0_W<0> {
+        RTCCAL0_W::new(self)
     }
     #[doc = "Bit 1 - RTC Calibration Bit 1"]
     #[inline(always)]
-    pub fn rtccal1(&mut self) -> RTCCAL1_W {
-        RTCCAL1_W { w: self }
+    #[must_use]
+    pub fn rtccal1(&mut self) -> RTCCAL1_W<1> {
+        RTCCAL1_W::new(self)
     }
     #[doc = "Bit 2 - RTC Calibration Bit 2"]
     #[inline(always)]
-    pub fn rtccal2(&mut self) -> RTCCAL2_W {
-        RTCCAL2_W { w: self }
+    #[must_use]
+    pub fn rtccal2(&mut self) -> RTCCAL2_W<2> {
+        RTCCAL2_W::new(self)
     }
     #[doc = "Bit 3 - RTC Calibration Bit 3"]
     #[inline(always)]
-    pub fn rtccal3(&mut self) -> RTCCAL3_W {
-        RTCCAL3_W { w: self }
+    #[must_use]
+    pub fn rtccal3(&mut self) -> RTCCAL3_W<3> {
+        RTCCAL3_W::new(self)
     }
     #[doc = "Bit 4 - RTC Calibration Bit 4"]
     #[inline(always)]
-    pub fn rtccal4(&mut self) -> RTCCAL4_W {
-        RTCCAL4_W { w: self }
+    #[must_use]
+    pub fn rtccal4(&mut self) -> RTCCAL4_W<4> {
+        RTCCAL4_W::new(self)
     }
     #[doc = "Bit 5 - RTC Calibration Bit 5"]
     #[inline(always)]
-    pub fn rtccal5(&mut self) -> RTCCAL5_W {
-        RTCCAL5_W { w: self }
+    #[must_use]
+    pub fn rtccal5(&mut self) -> RTCCAL5_W<5> {
+        RTCCAL5_W::new(self)
     }
     #[doc = "Bit 7 - RTC Calibration Sign"]
     #[inline(always)]
-    pub fn rtccals(&mut self) -> RTCCALS_W {
-        RTCCALS_W { w: self }
+    #[must_use]
+    pub fn rtccals(&mut self) -> RTCCALS_W<7> {
+        RTCCALS_W::new(self)
     }
     #[doc = "Bits 8:9 - RTC Calibration Frequency Bit 1"]
     #[inline(always)]
-    pub fn rtccalf(&mut self) -> RTCCALF_W {
-        RTCCALF_W { w: self }
+    #[must_use]
+    pub fn rtccalf(&mut self) -> RTCCALF_W<8> {
+        RTCCALF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -497,11 +251,10 @@ impl crate::Readable for RTCCTL23_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtcctl23::W](W) writer structure"]
 impl crate::Writable for RTCCTL23_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTCCTL23 to value 0"]
 impl crate::Resettable for RTCCTL23_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

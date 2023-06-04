@@ -35,388 +35,132 @@ impl From<crate::W<P4MAP5_SPEC>> for W {
     }
 }
 #[doc = "Field `PMAP0` reader - PMAP0"]
-pub struct PMAP0_R(crate::FieldReader<bool, bool>);
-impl PMAP0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP0_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP0` writer - PMAP0"]
-pub struct PMAP0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type PMAP0_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP1` reader - PMAP1"]
-pub struct PMAP1_R(crate::FieldReader<bool, bool>);
-impl PMAP1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP1_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP1` writer - PMAP1"]
-pub struct PMAP1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PMAP1_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP2` reader - PMAP2"]
-pub struct PMAP2_R(crate::FieldReader<bool, bool>);
-impl PMAP2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP2_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP2` writer - PMAP2"]
-pub struct PMAP2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PMAP2_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP3` reader - PMAP3"]
-pub struct PMAP3_R(crate::FieldReader<bool, bool>);
-impl PMAP3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP3_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP3` writer - PMAP3"]
-pub struct PMAP3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PMAP3_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP4` reader - PMAP4"]
-pub struct PMAP4_R(crate::FieldReader<bool, bool>);
-impl PMAP4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP4_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP4` writer - PMAP4"]
-pub struct PMAP4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
+pub type PMAP4_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP5` reader - PMAP5"]
-pub struct PMAP5_R(crate::FieldReader<bool, bool>);
-impl PMAP5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP5_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP5` writer - PMAP5"]
-pub struct PMAP5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type PMAP5_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP6` reader - PMAP6"]
-pub struct PMAP6_R(crate::FieldReader<bool, bool>);
-impl PMAP6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP6_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP6` writer - PMAP6"]
-pub struct PMAP6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
+pub type PMAP6_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 #[doc = "Field `PMAP7` reader - PMAP7"]
-pub struct PMAP7_R(crate::FieldReader<bool, bool>);
-impl PMAP7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAP7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAP7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAP7_R = crate::BitReader<bool>;
 #[doc = "Field `PMAP7` writer - PMAP7"]
-pub struct PMAP7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAP7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
+pub type PMAP7_W<'a, const O: u8> = crate::BitWriter<'a, u8, P4MAP5_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PMAP0"]
     #[inline(always)]
     pub fn pmap0(&self) -> PMAP0_R {
-        PMAP0_R::new((self.bits & 0x01) != 0)
+        PMAP0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - PMAP1"]
     #[inline(always)]
     pub fn pmap1(&self) -> PMAP1_R {
-        PMAP1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PMAP1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - PMAP2"]
     #[inline(always)]
     pub fn pmap2(&self) -> PMAP2_R {
-        PMAP2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PMAP2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PMAP3"]
     #[inline(always)]
     pub fn pmap3(&self) -> PMAP3_R {
-        PMAP3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PMAP3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - PMAP4"]
     #[inline(always)]
     pub fn pmap4(&self) -> PMAP4_R {
-        PMAP4_R::new(((self.bits >> 4) & 0x01) != 0)
+        PMAP4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - PMAP5"]
     #[inline(always)]
     pub fn pmap5(&self) -> PMAP5_R {
-        PMAP5_R::new(((self.bits >> 5) & 0x01) != 0)
+        PMAP5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - PMAP6"]
     #[inline(always)]
     pub fn pmap6(&self) -> PMAP6_R {
-        PMAP6_R::new(((self.bits >> 6) & 0x01) != 0)
+        PMAP6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - PMAP7"]
     #[inline(always)]
     pub fn pmap7(&self) -> PMAP7_R {
-        PMAP7_R::new(((self.bits >> 7) & 0x01) != 0)
+        PMAP7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PMAP0"]
     #[inline(always)]
-    pub fn pmap0(&mut self) -> PMAP0_W {
-        PMAP0_W { w: self }
+    #[must_use]
+    pub fn pmap0(&mut self) -> PMAP0_W<0> {
+        PMAP0_W::new(self)
     }
     #[doc = "Bit 1 - PMAP1"]
     #[inline(always)]
-    pub fn pmap1(&mut self) -> PMAP1_W {
-        PMAP1_W { w: self }
+    #[must_use]
+    pub fn pmap1(&mut self) -> PMAP1_W<1> {
+        PMAP1_W::new(self)
     }
     #[doc = "Bit 2 - PMAP2"]
     #[inline(always)]
-    pub fn pmap2(&mut self) -> PMAP2_W {
-        PMAP2_W { w: self }
+    #[must_use]
+    pub fn pmap2(&mut self) -> PMAP2_W<2> {
+        PMAP2_W::new(self)
     }
     #[doc = "Bit 3 - PMAP3"]
     #[inline(always)]
-    pub fn pmap3(&mut self) -> PMAP3_W {
-        PMAP3_W { w: self }
+    #[must_use]
+    pub fn pmap3(&mut self) -> PMAP3_W<3> {
+        PMAP3_W::new(self)
     }
     #[doc = "Bit 4 - PMAP4"]
     #[inline(always)]
-    pub fn pmap4(&mut self) -> PMAP4_W {
-        PMAP4_W { w: self }
+    #[must_use]
+    pub fn pmap4(&mut self) -> PMAP4_W<4> {
+        PMAP4_W::new(self)
     }
     #[doc = "Bit 5 - PMAP5"]
     #[inline(always)]
-    pub fn pmap5(&mut self) -> PMAP5_W {
-        PMAP5_W { w: self }
+    #[must_use]
+    pub fn pmap5(&mut self) -> PMAP5_W<5> {
+        PMAP5_W::new(self)
     }
     #[doc = "Bit 6 - PMAP6"]
     #[inline(always)]
-    pub fn pmap6(&mut self) -> PMAP6_W {
-        PMAP6_W { w: self }
+    #[must_use]
+    pub fn pmap6(&mut self) -> PMAP6_W<6> {
+        PMAP6_W::new(self)
     }
     #[doc = "Bit 7 - PMAP7"]
     #[inline(always)]
-    pub fn pmap7(&mut self) -> PMAP7_W {
-        PMAP7_W { w: self }
+    #[must_use]
+    pub fn pmap7(&mut self) -> PMAP7_W<7> {
+        PMAP7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
+        unsafe { self.0.bits(bits) };
         self
     }
 }
@@ -432,11 +176,10 @@ impl crate::Readable for P4MAP5_SPEC {
 #[doc = "`write(|w| ..)` method takes [p4map5::W](W) writer structure"]
 impl crate::Writable for P4MAP5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P4MAP5 to value 0"]
 impl crate::Resettable for P4MAP5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,388 +35,132 @@ impl From<crate::W<P2IES_SPEC>> for W {
     }
 }
 #[doc = "Field `P2IES0` reader - P2IES0"]
-pub struct P2IES0_R(crate::FieldReader<bool, bool>);
-impl P2IES0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES0_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES0` writer - P2IES0"]
-pub struct P2IES0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type P2IES0_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES1` reader - P2IES1"]
-pub struct P2IES1_R(crate::FieldReader<bool, bool>);
-impl P2IES1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES1_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES1` writer - P2IES1"]
-pub struct P2IES1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
+pub type P2IES1_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES2` reader - P2IES2"]
-pub struct P2IES2_R(crate::FieldReader<bool, bool>);
-impl P2IES2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES2_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES2` writer - P2IES2"]
-pub struct P2IES2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
+pub type P2IES2_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES3` reader - P2IES3"]
-pub struct P2IES3_R(crate::FieldReader<bool, bool>);
-impl P2IES3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES3_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES3` writer - P2IES3"]
-pub struct P2IES3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type P2IES3_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES4` reader - P2IES4"]
-pub struct P2IES4_R(crate::FieldReader<bool, bool>);
-impl P2IES4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES4_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES4` writer - P2IES4"]
-pub struct P2IES4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
+pub type P2IES4_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES5` reader - P2IES5"]
-pub struct P2IES5_R(crate::FieldReader<bool, bool>);
-impl P2IES5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES5_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES5` writer - P2IES5"]
-pub struct P2IES5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type P2IES5_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES6` reader - P2IES6"]
-pub struct P2IES6_R(crate::FieldReader<bool, bool>);
-impl P2IES6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES6_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES6` writer - P2IES6"]
-pub struct P2IES6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
+pub type P2IES6_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 #[doc = "Field `P2IES7` reader - P2IES7"]
-pub struct P2IES7_R(crate::FieldReader<bool, bool>);
-impl P2IES7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P2IES7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P2IES7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P2IES7_R = crate::BitReader<bool>;
 #[doc = "Field `P2IES7` writer - P2IES7"]
-pub struct P2IES7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P2IES7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
+pub type P2IES7_W<'a, const O: u8> = crate::BitWriter<'a, u8, P2IES_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - P2IES0"]
     #[inline(always)]
     pub fn p2ies0(&self) -> P2IES0_R {
-        P2IES0_R::new((self.bits & 0x01) != 0)
+        P2IES0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - P2IES1"]
     #[inline(always)]
     pub fn p2ies1(&self) -> P2IES1_R {
-        P2IES1_R::new(((self.bits >> 1) & 0x01) != 0)
+        P2IES1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - P2IES2"]
     #[inline(always)]
     pub fn p2ies2(&self) -> P2IES2_R {
-        P2IES2_R::new(((self.bits >> 2) & 0x01) != 0)
+        P2IES2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - P2IES3"]
     #[inline(always)]
     pub fn p2ies3(&self) -> P2IES3_R {
-        P2IES3_R::new(((self.bits >> 3) & 0x01) != 0)
+        P2IES3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - P2IES4"]
     #[inline(always)]
     pub fn p2ies4(&self) -> P2IES4_R {
-        P2IES4_R::new(((self.bits >> 4) & 0x01) != 0)
+        P2IES4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - P2IES5"]
     #[inline(always)]
     pub fn p2ies5(&self) -> P2IES5_R {
-        P2IES5_R::new(((self.bits >> 5) & 0x01) != 0)
+        P2IES5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - P2IES6"]
     #[inline(always)]
     pub fn p2ies6(&self) -> P2IES6_R {
-        P2IES6_R::new(((self.bits >> 6) & 0x01) != 0)
+        P2IES6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - P2IES7"]
     #[inline(always)]
     pub fn p2ies7(&self) -> P2IES7_R {
-        P2IES7_R::new(((self.bits >> 7) & 0x01) != 0)
+        P2IES7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - P2IES0"]
     #[inline(always)]
-    pub fn p2ies0(&mut self) -> P2IES0_W {
-        P2IES0_W { w: self }
+    #[must_use]
+    pub fn p2ies0(&mut self) -> P2IES0_W<0> {
+        P2IES0_W::new(self)
     }
     #[doc = "Bit 1 - P2IES1"]
     #[inline(always)]
-    pub fn p2ies1(&mut self) -> P2IES1_W {
-        P2IES1_W { w: self }
+    #[must_use]
+    pub fn p2ies1(&mut self) -> P2IES1_W<1> {
+        P2IES1_W::new(self)
     }
     #[doc = "Bit 2 - P2IES2"]
     #[inline(always)]
-    pub fn p2ies2(&mut self) -> P2IES2_W {
-        P2IES2_W { w: self }
+    #[must_use]
+    pub fn p2ies2(&mut self) -> P2IES2_W<2> {
+        P2IES2_W::new(self)
     }
     #[doc = "Bit 3 - P2IES3"]
     #[inline(always)]
-    pub fn p2ies3(&mut self) -> P2IES3_W {
-        P2IES3_W { w: self }
+    #[must_use]
+    pub fn p2ies3(&mut self) -> P2IES3_W<3> {
+        P2IES3_W::new(self)
     }
     #[doc = "Bit 4 - P2IES4"]
     #[inline(always)]
-    pub fn p2ies4(&mut self) -> P2IES4_W {
-        P2IES4_W { w: self }
+    #[must_use]
+    pub fn p2ies4(&mut self) -> P2IES4_W<4> {
+        P2IES4_W::new(self)
     }
     #[doc = "Bit 5 - P2IES5"]
     #[inline(always)]
-    pub fn p2ies5(&mut self) -> P2IES5_W {
-        P2IES5_W { w: self }
+    #[must_use]
+    pub fn p2ies5(&mut self) -> P2IES5_W<5> {
+        P2IES5_W::new(self)
     }
     #[doc = "Bit 6 - P2IES6"]
     #[inline(always)]
-    pub fn p2ies6(&mut self) -> P2IES6_W {
-        P2IES6_W { w: self }
+    #[must_use]
+    pub fn p2ies6(&mut self) -> P2IES6_W<6> {
+        P2IES6_W::new(self)
     }
     #[doc = "Bit 7 - P2IES7"]
     #[inline(always)]
-    pub fn p2ies7(&mut self) -> P2IES7_W {
-        P2IES7_W { w: self }
+    #[must_use]
+    pub fn p2ies7(&mut self) -> P2IES7_W<7> {
+        P2IES7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
+        unsafe { self.0.bits(bits) };
         self
     }
 }
@@ -432,11 +176,10 @@ impl crate::Readable for P2IES_SPEC {
 #[doc = "`write(|w| ..)` method takes [p2ies::W](W) writer structure"]
 impl crate::Writable for P2IES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P2IES to value 0"]
 impl crate::Resettable for P2IES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

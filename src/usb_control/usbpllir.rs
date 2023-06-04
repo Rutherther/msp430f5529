@@ -35,289 +35,97 @@ impl From<crate::W<USBPLLIR_SPEC>> for W {
     }
 }
 #[doc = "Field `USBOOLIFG` reader - USB - PLL out of lock Interrupt Flag"]
-pub struct USBOOLIFG_R(crate::FieldReader<bool, bool>);
-impl USBOOLIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBOOLIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBOOLIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBOOLIFG_R = crate::BitReader<bool>;
 #[doc = "Field `USBOOLIFG` writer - USB - PLL out of lock Interrupt Flag"]
-pub struct USBOOLIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBOOLIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type USBOOLIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 #[doc = "Field `USBLOSIFG` reader - USB - PLL loss of signal Interrupt Flag"]
-pub struct USBLOSIFG_R(crate::FieldReader<bool, bool>);
-impl USBLOSIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBLOSIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBLOSIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBLOSIFG_R = crate::BitReader<bool>;
 #[doc = "Field `USBLOSIFG` writer - USB - PLL loss of signal Interrupt Flag"]
-pub struct USBLOSIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBLOSIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type USBLOSIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 #[doc = "Field `USBOORIFG` reader - USB - PLL out of range Interrupt Flag"]
-pub struct USBOORIFG_R(crate::FieldReader<bool, bool>);
-impl USBOORIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBOORIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBOORIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBOORIFG_R = crate::BitReader<bool>;
 #[doc = "Field `USBOORIFG` writer - USB - PLL out of range Interrupt Flag"]
-pub struct USBOORIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBOORIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type USBOORIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 #[doc = "Field `USBOOLIE` reader - USB - PLL out of lock Interrupt enable"]
-pub struct USBOOLIE_R(crate::FieldReader<bool, bool>);
-impl USBOOLIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBOOLIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBOOLIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBOOLIE_R = crate::BitReader<bool>;
 #[doc = "Field `USBOOLIE` writer - USB - PLL out of lock Interrupt enable"]
-pub struct USBOOLIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBOOLIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
-        self.w
-    }
-}
+pub type USBOOLIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 #[doc = "Field `USBLOSIE` reader - USB - PLL loss of signal Interrupt enable"]
-pub struct USBLOSIE_R(crate::FieldReader<bool, bool>);
-impl USBLOSIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBLOSIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBLOSIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBLOSIE_R = crate::BitReader<bool>;
 #[doc = "Field `USBLOSIE` writer - USB - PLL loss of signal Interrupt enable"]
-pub struct USBLOSIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBLOSIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u16 & 0x01) << 9);
-        self.w
-    }
-}
+pub type USBLOSIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 #[doc = "Field `USBOORIE` reader - USB - PLL out of range Interrupt enable"]
-pub struct USBOORIE_R(crate::FieldReader<bool, bool>);
-impl USBOORIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBOORIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBOORIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBOORIE_R = crate::BitReader<bool>;
 #[doc = "Field `USBOORIE` writer - USB - PLL out of range Interrupt enable"]
-pub struct USBOORIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBOORIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u16 & 0x01) << 10);
-        self.w
-    }
-}
+pub type USBOORIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPLLIR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - USB - PLL out of lock Interrupt Flag"]
     #[inline(always)]
     pub fn usboolifg(&self) -> USBOOLIFG_R {
-        USBOOLIFG_R::new((self.bits & 0x01) != 0)
+        USBOOLIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USB - PLL loss of signal Interrupt Flag"]
     #[inline(always)]
     pub fn usblosifg(&self) -> USBLOSIFG_R {
-        USBLOSIFG_R::new(((self.bits >> 1) & 0x01) != 0)
+        USBLOSIFG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB - PLL out of range Interrupt Flag"]
     #[inline(always)]
     pub fn usboorifg(&self) -> USBOORIFG_R {
-        USBOORIFG_R::new(((self.bits >> 2) & 0x01) != 0)
+        USBOORIFG_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 8 - USB - PLL out of lock Interrupt enable"]
     #[inline(always)]
     pub fn usboolie(&self) -> USBOOLIE_R {
-        USBOOLIE_R::new(((self.bits >> 8) & 0x01) != 0)
+        USBOOLIE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - USB - PLL loss of signal Interrupt enable"]
     #[inline(always)]
     pub fn usblosie(&self) -> USBLOSIE_R {
-        USBLOSIE_R::new(((self.bits >> 9) & 0x01) != 0)
+        USBLOSIE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - USB - PLL out of range Interrupt enable"]
     #[inline(always)]
     pub fn usboorie(&self) -> USBOORIE_R {
-        USBOORIE_R::new(((self.bits >> 10) & 0x01) != 0)
+        USBOORIE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - USB - PLL out of lock Interrupt Flag"]
     #[inline(always)]
-    pub fn usboolifg(&mut self) -> USBOOLIFG_W {
-        USBOOLIFG_W { w: self }
+    #[must_use]
+    pub fn usboolifg(&mut self) -> USBOOLIFG_W<0> {
+        USBOOLIFG_W::new(self)
     }
     #[doc = "Bit 1 - USB - PLL loss of signal Interrupt Flag"]
     #[inline(always)]
-    pub fn usblosifg(&mut self) -> USBLOSIFG_W {
-        USBLOSIFG_W { w: self }
+    #[must_use]
+    pub fn usblosifg(&mut self) -> USBLOSIFG_W<1> {
+        USBLOSIFG_W::new(self)
     }
     #[doc = "Bit 2 - USB - PLL out of range Interrupt Flag"]
     #[inline(always)]
-    pub fn usboorifg(&mut self) -> USBOORIFG_W {
-        USBOORIFG_W { w: self }
+    #[must_use]
+    pub fn usboorifg(&mut self) -> USBOORIFG_W<2> {
+        USBOORIFG_W::new(self)
     }
     #[doc = "Bit 8 - USB - PLL out of lock Interrupt enable"]
     #[inline(always)]
-    pub fn usboolie(&mut self) -> USBOOLIE_W {
-        USBOOLIE_W { w: self }
+    #[must_use]
+    pub fn usboolie(&mut self) -> USBOOLIE_W<8> {
+        USBOOLIE_W::new(self)
     }
     #[doc = "Bit 9 - USB - PLL loss of signal Interrupt enable"]
     #[inline(always)]
-    pub fn usblosie(&mut self) -> USBLOSIE_W {
-        USBLOSIE_W { w: self }
+    #[must_use]
+    pub fn usblosie(&mut self) -> USBLOSIE_W<9> {
+        USBLOSIE_W::new(self)
     }
     #[doc = "Bit 10 - USB - PLL out of range Interrupt enable"]
     #[inline(always)]
-    pub fn usboorie(&mut self) -> USBOORIE_W {
-        USBOORIE_W { w: self }
+    #[must_use]
+    pub fn usboorie(&mut self) -> USBOORIE_W<10> {
+        USBOORIE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -338,11 +146,10 @@ impl crate::Readable for USBPLLIR_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbpllir::W](W) writer structure"]
 impl crate::Writable for USBPLLIR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBPLLIR to value 0"]
 impl crate::Resettable for USBPLLIR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

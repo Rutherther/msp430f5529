@@ -35,195 +35,67 @@ impl From<crate::W<PJOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `PJOUT0` reader - PJOUT0"]
-pub struct PJOUT0_R(crate::FieldReader<bool, bool>);
-impl PJOUT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJOUT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJOUT0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJOUT0_R = crate::BitReader<bool>;
 #[doc = "Field `PJOUT0` writer - PJOUT0"]
-pub struct PJOUT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJOUT0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type PJOUT0_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJOUT_SPEC, bool, O>;
 #[doc = "Field `PJOUT1` reader - PJOUT1"]
-pub struct PJOUT1_R(crate::FieldReader<bool, bool>);
-impl PJOUT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJOUT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJOUT1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJOUT1_R = crate::BitReader<bool>;
 #[doc = "Field `PJOUT1` writer - PJOUT1"]
-pub struct PJOUT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJOUT1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PJOUT1_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJOUT_SPEC, bool, O>;
 #[doc = "Field `PJOUT2` reader - PJOUT2"]
-pub struct PJOUT2_R(crate::FieldReader<bool, bool>);
-impl PJOUT2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJOUT2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJOUT2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJOUT2_R = crate::BitReader<bool>;
 #[doc = "Field `PJOUT2` writer - PJOUT2"]
-pub struct PJOUT2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJOUT2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PJOUT2_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJOUT_SPEC, bool, O>;
 #[doc = "Field `PJOUT3` reader - PJOUT3"]
-pub struct PJOUT3_R(crate::FieldReader<bool, bool>);
-impl PJOUT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PJOUT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PJOUT3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PJOUT3_R = crate::BitReader<bool>;
 #[doc = "Field `PJOUT3` writer - PJOUT3"]
-pub struct PJOUT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PJOUT3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PJOUT3_W<'a, const O: u8> = crate::BitWriter<'a, u16, PJOUT_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PJOUT0"]
     #[inline(always)]
     pub fn pjout0(&self) -> PJOUT0_R {
-        PJOUT0_R::new((self.bits & 0x01) != 0)
+        PJOUT0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - PJOUT1"]
     #[inline(always)]
     pub fn pjout1(&self) -> PJOUT1_R {
-        PJOUT1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PJOUT1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - PJOUT2"]
     #[inline(always)]
     pub fn pjout2(&self) -> PJOUT2_R {
-        PJOUT2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PJOUT2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PJOUT3"]
     #[inline(always)]
     pub fn pjout3(&self) -> PJOUT3_R {
-        PJOUT3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PJOUT3_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PJOUT0"]
     #[inline(always)]
-    pub fn pjout0(&mut self) -> PJOUT0_W {
-        PJOUT0_W { w: self }
+    #[must_use]
+    pub fn pjout0(&mut self) -> PJOUT0_W<0> {
+        PJOUT0_W::new(self)
     }
     #[doc = "Bit 1 - PJOUT1"]
     #[inline(always)]
-    pub fn pjout1(&mut self) -> PJOUT1_W {
-        PJOUT1_W { w: self }
+    #[must_use]
+    pub fn pjout1(&mut self) -> PJOUT1_W<1> {
+        PJOUT1_W::new(self)
     }
     #[doc = "Bit 2 - PJOUT2"]
     #[inline(always)]
-    pub fn pjout2(&mut self) -> PJOUT2_W {
-        PJOUT2_W { w: self }
+    #[must_use]
+    pub fn pjout2(&mut self) -> PJOUT2_W<2> {
+        PJOUT2_W::new(self)
     }
     #[doc = "Bit 3 - PJOUT3"]
     #[inline(always)]
-    pub fn pjout3(&mut self) -> PJOUT3_W {
-        PJOUT3_W { w: self }
+    #[must_use]
+    pub fn pjout3(&mut self) -> PJOUT3_W<3> {
+        PJOUT3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for PJOUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [pjout::W](W) writer structure"]
 impl crate::Writable for PJOUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PJOUT to value 0"]
 impl crate::Resettable for PJOUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

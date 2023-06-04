@@ -35,336 +35,112 @@ impl From<crate::W<USBPHYCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `PUOUT0` reader - USB - USB Port Output Signal Bit 0"]
-pub struct PUOUT0_R(crate::FieldReader<bool, bool>);
-impl PUOUT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUOUT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUOUT0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUOUT0_R = crate::BitReader<bool>;
 #[doc = "Field `PUOUT0` writer - USB - USB Port Output Signal Bit 0"]
-pub struct PUOUT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUOUT0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type PUOUT0_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUOUT1` reader - USB - USB Port Output Signal Bit 1"]
-pub struct PUOUT1_R(crate::FieldReader<bool, bool>);
-impl PUOUT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUOUT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUOUT1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUOUT1_R = crate::BitReader<bool>;
 #[doc = "Field `PUOUT1` writer - USB - USB Port Output Signal Bit 1"]
-pub struct PUOUT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUOUT1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PUOUT1_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUIN0` reader - USB - PU0/DP Input Data"]
-pub struct PUIN0_R(crate::FieldReader<bool, bool>);
-impl PUIN0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUIN0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUIN0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUIN0_R = crate::BitReader<bool>;
 #[doc = "Field `PUIN0` writer - USB - PU0/DP Input Data"]
-pub struct PUIN0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUIN0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PUIN0_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUIN1` reader - USB - PU1/DM Input Data"]
-pub struct PUIN1_R(crate::FieldReader<bool, bool>);
-impl PUIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUIN1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUIN1_R = crate::BitReader<bool>;
 #[doc = "Field `PUIN1` writer - USB - PU1/DM Input Data"]
-pub struct PUIN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUIN1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type PUIN1_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUOPE` reader - USB - USB Port Output Enable"]
-pub struct PUOPE_R(crate::FieldReader<bool, bool>);
-impl PUOPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUOPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUOPE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUOPE_R = crate::BitReader<bool>;
 #[doc = "Field `PUOPE` writer - USB - USB Port Output Enable"]
-pub struct PUOPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUOPE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type PUOPE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUSEL` reader - USB - USB Port Function Select"]
-pub struct PUSEL_R(crate::FieldReader<bool, bool>);
-impl PUSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUSEL_R = crate::BitReader<bool>;
 #[doc = "Field `PUSEL` writer - USB - USB Port Function Select"]
-pub struct PUSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUSEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type PUSEL_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 #[doc = "Field `PUIPE` reader - USB - PHY Single Ended Input enable"]
-pub struct PUIPE_R(crate::FieldReader<bool, bool>);
-impl PUIPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUIPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUIPE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUIPE_R = crate::BitReader<bool>;
 #[doc = "Field `PUIPE` writer - USB - PHY Single Ended Input enable"]
-pub struct PUIPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUIPE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
-        self.w
-    }
-}
+pub type PUIPE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBPHYCTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - USB - USB Port Output Signal Bit 0"]
     #[inline(always)]
     pub fn puout0(&self) -> PUOUT0_R {
-        PUOUT0_R::new((self.bits & 0x01) != 0)
+        PUOUT0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USB - USB Port Output Signal Bit 1"]
     #[inline(always)]
     pub fn puout1(&self) -> PUOUT1_R {
-        PUOUT1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PUOUT1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB - PU0/DP Input Data"]
     #[inline(always)]
     pub fn puin0(&self) -> PUIN0_R {
-        PUIN0_R::new(((self.bits >> 2) & 0x01) != 0)
+        PUIN0_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USB - PU1/DM Input Data"]
     #[inline(always)]
     pub fn puin1(&self) -> PUIN1_R {
-        PUIN1_R::new(((self.bits >> 3) & 0x01) != 0)
+        PUIN1_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - USB - USB Port Output Enable"]
     #[inline(always)]
     pub fn puope(&self) -> PUOPE_R {
-        PUOPE_R::new(((self.bits >> 5) & 0x01) != 0)
+        PUOPE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - USB - USB Port Function Select"]
     #[inline(always)]
     pub fn pusel(&self) -> PUSEL_R {
-        PUSEL_R::new(((self.bits >> 7) & 0x01) != 0)
+        PUSEL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - USB - PHY Single Ended Input enable"]
     #[inline(always)]
     pub fn puipe(&self) -> PUIPE_R {
-        PUIPE_R::new(((self.bits >> 8) & 0x01) != 0)
+        PUIPE_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - USB - USB Port Output Signal Bit 0"]
     #[inline(always)]
-    pub fn puout0(&mut self) -> PUOUT0_W {
-        PUOUT0_W { w: self }
+    #[must_use]
+    pub fn puout0(&mut self) -> PUOUT0_W<0> {
+        PUOUT0_W::new(self)
     }
     #[doc = "Bit 1 - USB - USB Port Output Signal Bit 1"]
     #[inline(always)]
-    pub fn puout1(&mut self) -> PUOUT1_W {
-        PUOUT1_W { w: self }
+    #[must_use]
+    pub fn puout1(&mut self) -> PUOUT1_W<1> {
+        PUOUT1_W::new(self)
     }
     #[doc = "Bit 2 - USB - PU0/DP Input Data"]
     #[inline(always)]
-    pub fn puin0(&mut self) -> PUIN0_W {
-        PUIN0_W { w: self }
+    #[must_use]
+    pub fn puin0(&mut self) -> PUIN0_W<2> {
+        PUIN0_W::new(self)
     }
     #[doc = "Bit 3 - USB - PU1/DM Input Data"]
     #[inline(always)]
-    pub fn puin1(&mut self) -> PUIN1_W {
-        PUIN1_W { w: self }
+    #[must_use]
+    pub fn puin1(&mut self) -> PUIN1_W<3> {
+        PUIN1_W::new(self)
     }
     #[doc = "Bit 5 - USB - USB Port Output Enable"]
     #[inline(always)]
-    pub fn puope(&mut self) -> PUOPE_W {
-        PUOPE_W { w: self }
+    #[must_use]
+    pub fn puope(&mut self) -> PUOPE_W<5> {
+        PUOPE_W::new(self)
     }
     #[doc = "Bit 7 - USB - USB Port Function Select"]
     #[inline(always)]
-    pub fn pusel(&mut self) -> PUSEL_W {
-        PUSEL_W { w: self }
+    #[must_use]
+    pub fn pusel(&mut self) -> PUSEL_W<7> {
+        PUSEL_W::new(self)
     }
     #[doc = "Bit 8 - USB - PHY Single Ended Input enable"]
     #[inline(always)]
-    pub fn puipe(&mut self) -> PUIPE_W {
-        PUIPE_W { w: self }
+    #[must_use]
+    pub fn puipe(&mut self) -> PUIPE_W<8> {
+        PUIPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -385,11 +161,10 @@ impl crate::Readable for USBPHYCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbphyctl::W](W) writer structure"]
 impl crate::Writable for USBPHYCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBPHYCTL to value 0"]
 impl crate::Resettable for USBPHYCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

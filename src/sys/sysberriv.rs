@@ -54,11 +54,10 @@ impl crate::Readable for SYSBERRIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [sysberriv::W](W) writer structure"]
 impl crate::Writable for SYSBERRIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSBERRIV to value 0"]
 impl crate::Resettable for SYSBERRIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

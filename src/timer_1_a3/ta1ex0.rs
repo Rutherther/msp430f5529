@@ -34,8 +34,10 @@ impl From<crate::W<TA1EX0_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `TAIDEX` reader - Timer A Input divider expansion Bit: 0"]
+pub type TAIDEX_R = crate::FieldReader<u8, TAIDEX_A>;
 #[doc = "Timer A Input divider expansion Bit: 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TAIDEX_A {
     #[doc = "0: Timer A Input divider expansion : /1"]
@@ -61,14 +63,8 @@ impl From<TAIDEX_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TAIDEX` reader - Timer A Input divider expansion Bit: 0"]
-pub struct TAIDEX_R(crate::FieldReader<u8, TAIDEX_A>);
 impl TAIDEX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TAIDEX_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TAIDEX_A {
         match self.bits {
@@ -86,61 +82,48 @@ impl TAIDEX_R {
     #[doc = "Checks if the value of the field is `TAIDEX_0`"]
     #[inline(always)]
     pub fn is_taidex_0(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_0
+        *self == TAIDEX_A::TAIDEX_0
     }
     #[doc = "Checks if the value of the field is `TAIDEX_1`"]
     #[inline(always)]
     pub fn is_taidex_1(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_1
+        *self == TAIDEX_A::TAIDEX_1
     }
     #[doc = "Checks if the value of the field is `TAIDEX_2`"]
     #[inline(always)]
     pub fn is_taidex_2(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_2
+        *self == TAIDEX_A::TAIDEX_2
     }
     #[doc = "Checks if the value of the field is `TAIDEX_3`"]
     #[inline(always)]
     pub fn is_taidex_3(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_3
+        *self == TAIDEX_A::TAIDEX_3
     }
     #[doc = "Checks if the value of the field is `TAIDEX_4`"]
     #[inline(always)]
     pub fn is_taidex_4(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_4
+        *self == TAIDEX_A::TAIDEX_4
     }
     #[doc = "Checks if the value of the field is `TAIDEX_5`"]
     #[inline(always)]
     pub fn is_taidex_5(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_5
+        *self == TAIDEX_A::TAIDEX_5
     }
     #[doc = "Checks if the value of the field is `TAIDEX_6`"]
     #[inline(always)]
     pub fn is_taidex_6(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_6
+        *self == TAIDEX_A::TAIDEX_6
     }
     #[doc = "Checks if the value of the field is `TAIDEX_7`"]
     #[inline(always)]
     pub fn is_taidex_7(&self) -> bool {
-        **self == TAIDEX_A::TAIDEX_7
-    }
-}
-impl core::ops::Deref for TAIDEX_R {
-    type Target = crate::FieldReader<u8, TAIDEX_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TAIDEX_A::TAIDEX_7
     }
 }
 #[doc = "Field `TAIDEX` writer - Timer A Input divider expansion Bit: 0"]
-pub struct TAIDEX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TAIDEX_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TAIDEX_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type TAIDEX_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, TA1EX0_SPEC, u8, TAIDEX_A, 3, O>;
+impl<'a, const O: u8> TAIDEX_W<'a, O> {
     #[doc = "Timer A Input divider expansion : /1"]
     #[inline(always)]
     pub fn taidex_0(self) -> &'a mut W {
@@ -181,25 +164,20 @@ impl<'a> TAIDEX_W<'a> {
     pub fn taidex_7(self) -> &'a mut W {
         self.variant(TAIDEX_A::TAIDEX_7)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u16 & 0x07);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:2 - Timer A Input divider expansion Bit: 0"]
     #[inline(always)]
     pub fn taidex(&self) -> TAIDEX_R {
-        TAIDEX_R::new((self.bits & 0x07) as u8)
+        TAIDEX_R::new((self.bits & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Timer A Input divider expansion Bit: 0"]
     #[inline(always)]
-    pub fn taidex(&mut self) -> TAIDEX_W {
-        TAIDEX_W { w: self }
+    #[must_use]
+    pub fn taidex(&mut self) -> TAIDEX_W<0> {
+        TAIDEX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -220,11 +198,10 @@ impl crate::Readable for TA1EX0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ta1ex0::W](W) writer structure"]
 impl crate::Writable for TA1EX0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TA1EX0 to value 0"]
 impl crate::Resettable for TA1EX0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

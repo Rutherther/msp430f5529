@@ -35,118 +35,21 @@ impl From<crate::W<USBMAINT_SPEC>> for W {
     }
 }
 #[doc = "Field `UTIFG` reader - USB - Timer Interrupt Flag"]
-pub struct UTIFG_R(crate::FieldReader<bool, bool>);
-impl UTIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UTIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTIFG_R = crate::BitReader<bool>;
 #[doc = "Field `UTIFG` writer - USB - Timer Interrupt Flag"]
-pub struct UTIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type UTIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBMAINT_SPEC, bool, O>;
 #[doc = "Field `UTIE` reader - USB - Timer Interrupt Enable"]
-pub struct UTIE_R(crate::FieldReader<bool, bool>);
-impl UTIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UTIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTIE_R = crate::BitReader<bool>;
 #[doc = "Field `UTIE` writer - USB - Timer Interrupt Enable"]
-pub struct UTIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type UTIE_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBMAINT_SPEC, bool, O>;
 #[doc = "Field `TSGEN` reader - USB - Time Stamp Generator Enable"]
-pub struct TSGEN_R(crate::FieldReader<bool, bool>);
-impl TSGEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TSGEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSGEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSGEN_R = crate::BitReader<bool>;
 #[doc = "Field `TSGEN` writer - USB - Time Stamp Generator Enable"]
-pub struct TSGEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSGEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
-        self.w
-    }
-}
+pub type TSGEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBMAINT_SPEC, bool, O>;
+#[doc = "Field `TSESEL` reader - USB - Time Stamp Event Select Bit 0"]
+pub type TSESEL_R = crate::FieldReader<u8, TSESEL_A>;
 #[doc = "USB - Time Stamp Event Select Bit 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TSESEL_A {
     #[doc = "0: USB - Time Stamp Event Select: 0"]
@@ -164,14 +67,8 @@ impl From<TSESEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `TSESEL` reader - USB - Time Stamp Event Select Bit 0"]
-pub struct TSESEL_R(crate::FieldReader<u8, TSESEL_A>);
 impl TSESEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TSESEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> TSESEL_A {
         match self.bits {
@@ -185,41 +82,28 @@ impl TSESEL_R {
     #[doc = "Checks if the value of the field is `TSESEL_0`"]
     #[inline(always)]
     pub fn is_tsesel_0(&self) -> bool {
-        **self == TSESEL_A::TSESEL_0
+        *self == TSESEL_A::TSESEL_0
     }
     #[doc = "Checks if the value of the field is `TSESEL_1`"]
     #[inline(always)]
     pub fn is_tsesel_1(&self) -> bool {
-        **self == TSESEL_A::TSESEL_1
+        *self == TSESEL_A::TSESEL_1
     }
     #[doc = "Checks if the value of the field is `TSESEL_2`"]
     #[inline(always)]
     pub fn is_tsesel_2(&self) -> bool {
-        **self == TSESEL_A::TSESEL_2
+        *self == TSESEL_A::TSESEL_2
     }
     #[doc = "Checks if the value of the field is `TSESEL_3`"]
     #[inline(always)]
     pub fn is_tsesel_3(&self) -> bool {
-        **self == TSESEL_A::TSESEL_3
-    }
-}
-impl core::ops::Deref for TSESEL_R {
-    type Target = crate::FieldReader<u8, TSESEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == TSESEL_A::TSESEL_3
     }
 }
 #[doc = "Field `TSESEL` writer - USB - Time Stamp Event Select Bit 0"]
-pub struct TSESEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSESEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: TSESEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type TSESEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, USBMAINT_SPEC, u8, TSESEL_A, 2, O>;
+impl<'a, const O: u8> TSESEL_W<'a, O> {
     #[doc = "USB - Time Stamp Event Select: 0"]
     #[inline(always)]
     pub fn tsesel_0(self) -> &'a mut W {
@@ -240,52 +124,15 @@ impl<'a> TSESEL_W<'a> {
     pub fn tsesel_3(self) -> &'a mut W {
         self.variant(TSESEL_A::TSESEL_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u16 & 0x03) << 9);
-        self.w
-    }
 }
 #[doc = "Field `TSE3` reader - USB - Time Stamp Event #3 Bit"]
-pub struct TSE3_R(crate::FieldReader<bool, bool>);
-impl TSE3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TSE3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSE3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSE3_R = crate::BitReader<bool>;
 #[doc = "Field `TSE3` writer - USB - Time Stamp Event #3 Bit"]
-pub struct TSE3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSE3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
-        self.w
-    }
-}
+pub type TSE3_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBMAINT_SPEC, bool, O>;
+#[doc = "Field `UTSEL` reader - USB - Timer Select Bit 0"]
+pub type UTSEL_R = crate::FieldReader<u8, UTSEL_A>;
 #[doc = "USB - Timer Select Bit 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum UTSEL_A {
     #[doc = "0: USB - Timer Select: 0"]
@@ -311,14 +158,8 @@ impl From<UTSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `UTSEL` reader - USB - Timer Select Bit 0"]
-pub struct UTSEL_R(crate::FieldReader<u8, UTSEL_A>);
 impl UTSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UTSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> UTSEL_A {
         match self.bits {
@@ -336,61 +177,48 @@ impl UTSEL_R {
     #[doc = "Checks if the value of the field is `UTSEL_0`"]
     #[inline(always)]
     pub fn is_utsel_0(&self) -> bool {
-        **self == UTSEL_A::UTSEL_0
+        *self == UTSEL_A::UTSEL_0
     }
     #[doc = "Checks if the value of the field is `UTSEL_1`"]
     #[inline(always)]
     pub fn is_utsel_1(&self) -> bool {
-        **self == UTSEL_A::UTSEL_1
+        *self == UTSEL_A::UTSEL_1
     }
     #[doc = "Checks if the value of the field is `UTSEL_2`"]
     #[inline(always)]
     pub fn is_utsel_2(&self) -> bool {
-        **self == UTSEL_A::UTSEL_2
+        *self == UTSEL_A::UTSEL_2
     }
     #[doc = "Checks if the value of the field is `UTSEL_3`"]
     #[inline(always)]
     pub fn is_utsel_3(&self) -> bool {
-        **self == UTSEL_A::UTSEL_3
+        *self == UTSEL_A::UTSEL_3
     }
     #[doc = "Checks if the value of the field is `UTSEL_4`"]
     #[inline(always)]
     pub fn is_utsel_4(&self) -> bool {
-        **self == UTSEL_A::UTSEL_4
+        *self == UTSEL_A::UTSEL_4
     }
     #[doc = "Checks if the value of the field is `UTSEL_5`"]
     #[inline(always)]
     pub fn is_utsel_5(&self) -> bool {
-        **self == UTSEL_A::UTSEL_5
+        *self == UTSEL_A::UTSEL_5
     }
     #[doc = "Checks if the value of the field is `UTSEL_6`"]
     #[inline(always)]
     pub fn is_utsel_6(&self) -> bool {
-        **self == UTSEL_A::UTSEL_6
+        *self == UTSEL_A::UTSEL_6
     }
     #[doc = "Checks if the value of the field is `UTSEL_7`"]
     #[inline(always)]
     pub fn is_utsel_7(&self) -> bool {
-        **self == UTSEL_A::UTSEL_7
-    }
-}
-impl core::ops::Deref for UTSEL_R {
-    type Target = crate::FieldReader<u8, UTSEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == UTSEL_A::UTSEL_7
     }
 }
 #[doc = "Field `UTSEL` writer - USB - Timer Select Bit 0"]
-pub struct UTSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: UTSEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type UTSEL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, USBMAINT_SPEC, u8, UTSEL_A, 3, O>;
+impl<'a, const O: u8> UTSEL_W<'a, O> {
     #[doc = "USB - Timer Select: 0"]
     #[inline(always)]
     pub fn utsel_0(self) -> &'a mut W {
@@ -431,75 +259,75 @@ impl<'a> UTSEL_W<'a> {
     pub fn utsel_7(self) -> &'a mut W {
         self.variant(UTSEL_A::UTSEL_7)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u16 & 0x07) << 13);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0 - USB - Timer Interrupt Flag"]
     #[inline(always)]
     pub fn utifg(&self) -> UTIFG_R {
-        UTIFG_R::new((self.bits & 0x01) != 0)
+        UTIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USB - Timer Interrupt Enable"]
     #[inline(always)]
     pub fn utie(&self) -> UTIE_R {
-        UTIE_R::new(((self.bits >> 1) & 0x01) != 0)
+        UTIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8 - USB - Time Stamp Generator Enable"]
     #[inline(always)]
     pub fn tsgen(&self) -> TSGEN_R {
-        TSGEN_R::new(((self.bits >> 8) & 0x01) != 0)
+        TSGEN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:10 - USB - Time Stamp Event Select Bit 0"]
     #[inline(always)]
     pub fn tsesel(&self) -> TSESEL_R {
-        TSESEL_R::new(((self.bits >> 9) & 0x03) as u8)
+        TSESEL_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bit 11 - USB - Time Stamp Event #3 Bit"]
     #[inline(always)]
     pub fn tse3(&self) -> TSE3_R {
-        TSE3_R::new(((self.bits >> 11) & 0x01) != 0)
+        TSE3_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 13:15 - USB - Timer Select Bit 0"]
     #[inline(always)]
     pub fn utsel(&self) -> UTSEL_R {
-        UTSEL_R::new(((self.bits >> 13) & 0x07) as u8)
+        UTSEL_R::new(((self.bits >> 13) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - USB - Timer Interrupt Flag"]
     #[inline(always)]
-    pub fn utifg(&mut self) -> UTIFG_W {
-        UTIFG_W { w: self }
+    #[must_use]
+    pub fn utifg(&mut self) -> UTIFG_W<0> {
+        UTIFG_W::new(self)
     }
     #[doc = "Bit 1 - USB - Timer Interrupt Enable"]
     #[inline(always)]
-    pub fn utie(&mut self) -> UTIE_W {
-        UTIE_W { w: self }
+    #[must_use]
+    pub fn utie(&mut self) -> UTIE_W<1> {
+        UTIE_W::new(self)
     }
     #[doc = "Bit 8 - USB - Time Stamp Generator Enable"]
     #[inline(always)]
-    pub fn tsgen(&mut self) -> TSGEN_W {
-        TSGEN_W { w: self }
+    #[must_use]
+    pub fn tsgen(&mut self) -> TSGEN_W<8> {
+        TSGEN_W::new(self)
     }
     #[doc = "Bits 9:10 - USB - Time Stamp Event Select Bit 0"]
     #[inline(always)]
-    pub fn tsesel(&mut self) -> TSESEL_W {
-        TSESEL_W { w: self }
+    #[must_use]
+    pub fn tsesel(&mut self) -> TSESEL_W<9> {
+        TSESEL_W::new(self)
     }
     #[doc = "Bit 11 - USB - Time Stamp Event #3 Bit"]
     #[inline(always)]
-    pub fn tse3(&mut self) -> TSE3_W {
-        TSE3_W { w: self }
+    #[must_use]
+    pub fn tse3(&mut self) -> TSE3_W<11> {
+        TSE3_W::new(self)
     }
     #[doc = "Bits 13:15 - USB - Timer Select Bit 0"]
     #[inline(always)]
-    pub fn utsel(&mut self) -> UTSEL_W {
-        UTSEL_W { w: self }
+    #[must_use]
+    pub fn utsel(&mut self) -> UTSEL_W<13> {
+        UTSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -520,11 +348,10 @@ impl crate::Readable for USBMAINT_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbmaint::W](W) writer structure"]
 impl crate::Writable for USBMAINT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBMAINT to value 0"]
 impl crate::Resettable for USBMAINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

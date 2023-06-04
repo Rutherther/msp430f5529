@@ -35,289 +35,97 @@ impl From<crate::W<SFRIFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `WDTIFG` reader - WDT Interrupt Flag"]
-pub struct WDTIFG_R(crate::FieldReader<bool, bool>);
-impl WDTIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WDTIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDTIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDTIFG_R = crate::BitReader<bool>;
 #[doc = "Field `WDTIFG` writer - WDT Interrupt Flag"]
-pub struct WDTIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type WDTIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 #[doc = "Field `OFIFG` reader - Osc Fault Flag"]
-pub struct OFIFG_R(crate::FieldReader<bool, bool>);
-impl OFIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OFIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OFIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OFIFG_R = crate::BitReader<bool>;
 #[doc = "Field `OFIFG` writer - Osc Fault Flag"]
-pub struct OFIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OFIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type OFIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 #[doc = "Field `VMAIFG` reader - Vacant Memory Interrupt Flag"]
-pub struct VMAIFG_R(crate::FieldReader<bool, bool>);
-impl VMAIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VMAIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VMAIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VMAIFG_R = crate::BitReader<bool>;
 #[doc = "Field `VMAIFG` writer - Vacant Memory Interrupt Flag"]
-pub struct VMAIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VMAIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type VMAIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 #[doc = "Field `NMIIFG` reader - NMI Interrupt Flag"]
-pub struct NMIIFG_R(crate::FieldReader<bool, bool>);
-impl NMIIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NMIIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NMIIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NMIIFG_R = crate::BitReader<bool>;
 #[doc = "Field `NMIIFG` writer - NMI Interrupt Flag"]
-pub struct NMIIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NMIIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type NMIIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 #[doc = "Field `JMBINIFG` reader - JTAG Mail Box input Interrupt Flag"]
-pub struct JMBINIFG_R(crate::FieldReader<bool, bool>);
-impl JMBINIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JMBINIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JMBINIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JMBINIFG_R = crate::BitReader<bool>;
 #[doc = "Field `JMBINIFG` writer - JTAG Mail Box input Interrupt Flag"]
-pub struct JMBINIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JMBINIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
-        self.w
-    }
-}
+pub type JMBINIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 #[doc = "Field `JMBOUTIFG` reader - JTAG Mail Box output Interrupt Flag"]
-pub struct JMBOUTIFG_R(crate::FieldReader<bool, bool>);
-impl JMBOUTIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JMBOUTIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JMBOUTIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JMBOUTIFG_R = crate::BitReader<bool>;
 #[doc = "Field `JMBOUTIFG` writer - JTAG Mail Box output Interrupt Flag"]
-pub struct JMBOUTIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JMBOUTIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type JMBOUTIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRIFG1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - WDT Interrupt Flag"]
     #[inline(always)]
     pub fn wdtifg(&self) -> WDTIFG_R {
-        WDTIFG_R::new((self.bits & 0x01) != 0)
+        WDTIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Osc Fault Flag"]
     #[inline(always)]
     pub fn ofifg(&self) -> OFIFG_R {
-        OFIFG_R::new(((self.bits >> 1) & 0x01) != 0)
+        OFIFG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - Vacant Memory Interrupt Flag"]
     #[inline(always)]
     pub fn vmaifg(&self) -> VMAIFG_R {
-        VMAIFG_R::new(((self.bits >> 3) & 0x01) != 0)
+        VMAIFG_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - NMI Interrupt Flag"]
     #[inline(always)]
     pub fn nmiifg(&self) -> NMIIFG_R {
-        NMIIFG_R::new(((self.bits >> 4) & 0x01) != 0)
+        NMIIFG_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - JTAG Mail Box input Interrupt Flag"]
     #[inline(always)]
     pub fn jmbinifg(&self) -> JMBINIFG_R {
-        JMBINIFG_R::new(((self.bits >> 6) & 0x01) != 0)
+        JMBINIFG_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - JTAG Mail Box output Interrupt Flag"]
     #[inline(always)]
     pub fn jmboutifg(&self) -> JMBOUTIFG_R {
-        JMBOUTIFG_R::new(((self.bits >> 7) & 0x01) != 0)
+        JMBOUTIFG_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - WDT Interrupt Flag"]
     #[inline(always)]
-    pub fn wdtifg(&mut self) -> WDTIFG_W {
-        WDTIFG_W { w: self }
+    #[must_use]
+    pub fn wdtifg(&mut self) -> WDTIFG_W<0> {
+        WDTIFG_W::new(self)
     }
     #[doc = "Bit 1 - Osc Fault Flag"]
     #[inline(always)]
-    pub fn ofifg(&mut self) -> OFIFG_W {
-        OFIFG_W { w: self }
+    #[must_use]
+    pub fn ofifg(&mut self) -> OFIFG_W<1> {
+        OFIFG_W::new(self)
     }
     #[doc = "Bit 3 - Vacant Memory Interrupt Flag"]
     #[inline(always)]
-    pub fn vmaifg(&mut self) -> VMAIFG_W {
-        VMAIFG_W { w: self }
+    #[must_use]
+    pub fn vmaifg(&mut self) -> VMAIFG_W<3> {
+        VMAIFG_W::new(self)
     }
     #[doc = "Bit 4 - NMI Interrupt Flag"]
     #[inline(always)]
-    pub fn nmiifg(&mut self) -> NMIIFG_W {
-        NMIIFG_W { w: self }
+    #[must_use]
+    pub fn nmiifg(&mut self) -> NMIIFG_W<4> {
+        NMIIFG_W::new(self)
     }
     #[doc = "Bit 6 - JTAG Mail Box input Interrupt Flag"]
     #[inline(always)]
-    pub fn jmbinifg(&mut self) -> JMBINIFG_W {
-        JMBINIFG_W { w: self }
+    #[must_use]
+    pub fn jmbinifg(&mut self) -> JMBINIFG_W<6> {
+        JMBINIFG_W::new(self)
     }
     #[doc = "Bit 7 - JTAG Mail Box output Interrupt Flag"]
     #[inline(always)]
-    pub fn jmboutifg(&mut self) -> JMBOUTIFG_W {
-        JMBOUTIFG_W { w: self }
+    #[must_use]
+    pub fn jmboutifg(&mut self) -> JMBOUTIFG_W<7> {
+        JMBOUTIFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -338,11 +146,10 @@ impl crate::Readable for SFRIFG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sfrifg1::W](W) writer structure"]
 impl crate::Writable for SFRIFG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SFRIFG1 to value 0"]
 impl crate::Resettable for SFRIFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

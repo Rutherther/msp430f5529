@@ -35,148 +35,52 @@ impl From<crate::W<DMACTL4_SPEC>> for W {
     }
 }
 #[doc = "Field `ENNMI` reader - Enable NMI interruption of DMA"]
-pub struct ENNMI_R(crate::FieldReader<bool, bool>);
-impl ENNMI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENNMI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENNMI_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENNMI_R = crate::BitReader<bool>;
 #[doc = "Field `ENNMI` writer - Enable NMI interruption of DMA"]
-pub struct ENNMI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENNMI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type ENNMI_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMACTL4_SPEC, bool, O>;
 #[doc = "Field `ROUNDROBIN` reader - Round-Robin DMA channel priorities"]
-pub struct ROUNDROBIN_R(crate::FieldReader<bool, bool>);
-impl ROUNDROBIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ROUNDROBIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROUNDROBIN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROUNDROBIN_R = crate::BitReader<bool>;
 #[doc = "Field `ROUNDROBIN` writer - Round-Robin DMA channel priorities"]
-pub struct ROUNDROBIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROUNDROBIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type ROUNDROBIN_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMACTL4_SPEC, bool, O>;
 #[doc = "Field `DMARMWDIS` reader - Inhibited DMA transfers during read-modify-write CPU operations"]
-pub struct DMARMWDIS_R(crate::FieldReader<bool, bool>);
-impl DMARMWDIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMARMWDIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMARMWDIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMARMWDIS_R = crate::BitReader<bool>;
 #[doc = "Field `DMARMWDIS` writer - Inhibited DMA transfers during read-modify-write CPU operations"]
-pub struct DMARMWDIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMARMWDIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type DMARMWDIS_W<'a, const O: u8> = crate::BitWriter<'a, u16, DMACTL4_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Enable NMI interruption of DMA"]
     #[inline(always)]
     pub fn ennmi(&self) -> ENNMI_R {
-        ENNMI_R::new((self.bits & 0x01) != 0)
+        ENNMI_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Round-Robin DMA channel priorities"]
     #[inline(always)]
     pub fn roundrobin(&self) -> ROUNDROBIN_R {
-        ROUNDROBIN_R::new(((self.bits >> 1) & 0x01) != 0)
+        ROUNDROBIN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Inhibited DMA transfers during read-modify-write CPU operations"]
     #[inline(always)]
     pub fn dmarmwdis(&self) -> DMARMWDIS_R {
-        DMARMWDIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        DMARMWDIS_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable NMI interruption of DMA"]
     #[inline(always)]
-    pub fn ennmi(&mut self) -> ENNMI_W {
-        ENNMI_W { w: self }
+    #[must_use]
+    pub fn ennmi(&mut self) -> ENNMI_W<0> {
+        ENNMI_W::new(self)
     }
     #[doc = "Bit 1 - Round-Robin DMA channel priorities"]
     #[inline(always)]
-    pub fn roundrobin(&mut self) -> ROUNDROBIN_W {
-        ROUNDROBIN_W { w: self }
+    #[must_use]
+    pub fn roundrobin(&mut self) -> ROUNDROBIN_W<1> {
+        ROUNDROBIN_W::new(self)
     }
     #[doc = "Bit 2 - Inhibited DMA transfers during read-modify-write CPU operations"]
     #[inline(always)]
-    pub fn dmarmwdis(&mut self) -> DMARMWDIS_W {
-        DMARMWDIS_W { w: self }
+    #[must_use]
+    pub fn dmarmwdis(&mut self) -> DMARMWDIS_W<2> {
+        DMARMWDIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -197,11 +101,10 @@ impl crate::Readable for DMACTL4_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmactl4::W](W) writer structure"]
 impl crate::Writable for DMACTL4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMACTL4 to value 0"]
 impl crate::Resettable for DMACTL4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

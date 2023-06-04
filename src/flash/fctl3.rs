@@ -35,336 +35,112 @@ impl From<crate::W<FCTL3_SPEC>> for W {
     }
 }
 #[doc = "Field `BUSY` reader - Flash busy: 1"]
-pub struct BUSY_R(crate::FieldReader<bool, bool>);
-impl BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `BUSY` writer - Flash busy: 1"]
-pub struct BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `KEYV` reader - Flash Key violation flag"]
-pub struct KEYV_R(crate::FieldReader<bool, bool>);
-impl KEYV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        KEYV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEYV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEYV_R = crate::BitReader<bool>;
 #[doc = "Field `KEYV` writer - Flash Key violation flag"]
-pub struct KEYV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEYV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type KEYV_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `ACCVIFG` reader - Flash Access violation flag"]
-pub struct ACCVIFG_R(crate::FieldReader<bool, bool>);
-impl ACCVIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACCVIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACCVIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACCVIFG_R = crate::BitReader<bool>;
 #[doc = "Field `ACCVIFG` writer - Flash Access violation flag"]
-pub struct ACCVIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACCVIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type ACCVIFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `WAIT` reader - Wait flag for segment write"]
-pub struct WAIT_R(crate::FieldReader<bool, bool>);
-impl WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WAIT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WAIT_R = crate::BitReader<bool>;
 #[doc = "Field `WAIT` writer - Wait flag for segment write"]
-pub struct WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WAIT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type WAIT_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `LOCK` reader - Lock bit: 1 - Flash is locked (read only)"]
-pub struct LOCK_R(crate::FieldReader<bool, bool>);
-impl LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `LOCK` writer - Lock bit: 1 - Flash is locked (read only)"]
-pub struct LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `EMEX` reader - Flash Emergency Exit"]
-pub struct EMEX_R(crate::FieldReader<bool, bool>);
-impl EMEX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EMEX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EMEX_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EMEX_R = crate::BitReader<bool>;
 #[doc = "Field `EMEX` writer - Flash Emergency Exit"]
-pub struct EMEX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EMEX_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type EMEX_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 #[doc = "Field `LOCKA` reader - Segment A Lock bit: read = 1 - Segment is locked (read only)"]
-pub struct LOCKA_R(crate::FieldReader<bool, bool>);
-impl LOCKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOCKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOCKA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOCKA_R = crate::BitReader<bool>;
 #[doc = "Field `LOCKA` writer - Segment A Lock bit: read = 1 - Segment is locked (read only)"]
-pub struct LOCKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOCKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
-        self.w
-    }
-}
+pub type LOCKA_W<'a, const O: u8> = crate::BitWriter<'a, u16, FCTL3_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Flash busy: 1"]
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
-        BUSY_R::new((self.bits & 0x01) != 0)
+        BUSY_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Flash Key violation flag"]
     #[inline(always)]
     pub fn keyv(&self) -> KEYV_R {
-        KEYV_R::new(((self.bits >> 1) & 0x01) != 0)
+        KEYV_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Flash Access violation flag"]
     #[inline(always)]
     pub fn accvifg(&self) -> ACCVIFG_R {
-        ACCVIFG_R::new(((self.bits >> 2) & 0x01) != 0)
+        ACCVIFG_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Wait flag for segment write"]
     #[inline(always)]
     pub fn wait(&self) -> WAIT_R {
-        WAIT_R::new(((self.bits >> 3) & 0x01) != 0)
+        WAIT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Lock bit: 1 - Flash is locked (read only)"]
     #[inline(always)]
     pub fn lock(&self) -> LOCK_R {
-        LOCK_R::new(((self.bits >> 4) & 0x01) != 0)
+        LOCK_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Flash Emergency Exit"]
     #[inline(always)]
     pub fn emex(&self) -> EMEX_R {
-        EMEX_R::new(((self.bits >> 5) & 0x01) != 0)
+        EMEX_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Segment A Lock bit: read = 1 - Segment is locked (read only)"]
     #[inline(always)]
     pub fn locka(&self) -> LOCKA_R {
-        LOCKA_R::new(((self.bits >> 6) & 0x01) != 0)
+        LOCKA_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Flash busy: 1"]
     #[inline(always)]
-    pub fn busy(&mut self) -> BUSY_W {
-        BUSY_W { w: self }
+    #[must_use]
+    pub fn busy(&mut self) -> BUSY_W<0> {
+        BUSY_W::new(self)
     }
     #[doc = "Bit 1 - Flash Key violation flag"]
     #[inline(always)]
-    pub fn keyv(&mut self) -> KEYV_W {
-        KEYV_W { w: self }
+    #[must_use]
+    pub fn keyv(&mut self) -> KEYV_W<1> {
+        KEYV_W::new(self)
     }
     #[doc = "Bit 2 - Flash Access violation flag"]
     #[inline(always)]
-    pub fn accvifg(&mut self) -> ACCVIFG_W {
-        ACCVIFG_W { w: self }
+    #[must_use]
+    pub fn accvifg(&mut self) -> ACCVIFG_W<2> {
+        ACCVIFG_W::new(self)
     }
     #[doc = "Bit 3 - Wait flag for segment write"]
     #[inline(always)]
-    pub fn wait(&mut self) -> WAIT_W {
-        WAIT_W { w: self }
+    #[must_use]
+    pub fn wait(&mut self) -> WAIT_W<3> {
+        WAIT_W::new(self)
     }
     #[doc = "Bit 4 - Lock bit: 1 - Flash is locked (read only)"]
     #[inline(always)]
-    pub fn lock(&mut self) -> LOCK_W {
-        LOCK_W { w: self }
+    #[must_use]
+    pub fn lock(&mut self) -> LOCK_W<4> {
+        LOCK_W::new(self)
     }
     #[doc = "Bit 5 - Flash Emergency Exit"]
     #[inline(always)]
-    pub fn emex(&mut self) -> EMEX_W {
-        EMEX_W { w: self }
+    #[must_use]
+    pub fn emex(&mut self) -> EMEX_W<5> {
+        EMEX_W::new(self)
     }
     #[doc = "Bit 6 - Segment A Lock bit: read = 1 - Segment is locked (read only)"]
     #[inline(always)]
-    pub fn locka(&mut self) -> LOCKA_W {
-        LOCKA_W { w: self }
+    #[must_use]
+    pub fn locka(&mut self) -> LOCKA_W<6> {
+        LOCKA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -385,11 +161,10 @@ impl crate::Readable for FCTL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [fctl3::W](W) writer structure"]
 impl crate::Writable for FCTL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FCTL3 to value 0"]
 impl crate::Resettable for FCTL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

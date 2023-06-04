@@ -35,242 +35,82 @@ impl From<crate::W<RCCTL0_SPEC>> for W {
     }
 }
 #[doc = "Field `RCRS0OFF` reader - RAM Controller RAM Sector 0 Off"]
-pub struct RCRS0OFF_R(crate::FieldReader<bool, bool>);
-impl RCRS0OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RCRS0OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCRS0OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCRS0OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RCRS0OFF` writer - RAM Controller RAM Sector 0 Off"]
-pub struct RCRS0OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCRS0OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type RCRS0OFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, RCCTL0_SPEC, bool, O>;
 #[doc = "Field `RCRS1OFF` reader - RAM Controller RAM Sector 1 Off"]
-pub struct RCRS1OFF_R(crate::FieldReader<bool, bool>);
-impl RCRS1OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RCRS1OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCRS1OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCRS1OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RCRS1OFF` writer - RAM Controller RAM Sector 1 Off"]
-pub struct RCRS1OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCRS1OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type RCRS1OFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, RCCTL0_SPEC, bool, O>;
 #[doc = "Field `RCRS2OFF` reader - RAM Controller RAM Sector 2 Off"]
-pub struct RCRS2OFF_R(crate::FieldReader<bool, bool>);
-impl RCRS2OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RCRS2OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCRS2OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCRS2OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RCRS2OFF` writer - RAM Controller RAM Sector 2 Off"]
-pub struct RCRS2OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCRS2OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type RCRS2OFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, RCCTL0_SPEC, bool, O>;
 #[doc = "Field `RCRS3OFF` reader - RAM Controller RAM Sector 3 Off"]
-pub struct RCRS3OFF_R(crate::FieldReader<bool, bool>);
-impl RCRS3OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RCRS3OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCRS3OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCRS3OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RCRS3OFF` writer - RAM Controller RAM Sector 3 Off"]
-pub struct RCRS3OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCRS3OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type RCRS3OFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, RCCTL0_SPEC, bool, O>;
 #[doc = "Field `RCRS7OFF` reader - RAM Controller RAM Sector 7 (USB) Off"]
-pub struct RCRS7OFF_R(crate::FieldReader<bool, bool>);
-impl RCRS7OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RCRS7OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RCRS7OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RCRS7OFF_R = crate::BitReader<bool>;
 #[doc = "Field `RCRS7OFF` writer - RAM Controller RAM Sector 7 (USB) Off"]
-pub struct RCRS7OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RCRS7OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type RCRS7OFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, RCCTL0_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - RAM Controller RAM Sector 0 Off"]
     #[inline(always)]
     pub fn rcrs0off(&self) -> RCRS0OFF_R {
-        RCRS0OFF_R::new((self.bits & 0x01) != 0)
+        RCRS0OFF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RAM Controller RAM Sector 1 Off"]
     #[inline(always)]
     pub fn rcrs1off(&self) -> RCRS1OFF_R {
-        RCRS1OFF_R::new(((self.bits >> 1) & 0x01) != 0)
+        RCRS1OFF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RAM Controller RAM Sector 2 Off"]
     #[inline(always)]
     pub fn rcrs2off(&self) -> RCRS2OFF_R {
-        RCRS2OFF_R::new(((self.bits >> 2) & 0x01) != 0)
+        RCRS2OFF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RAM Controller RAM Sector 3 Off"]
     #[inline(always)]
     pub fn rcrs3off(&self) -> RCRS3OFF_R {
-        RCRS3OFF_R::new(((self.bits >> 3) & 0x01) != 0)
+        RCRS3OFF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - RAM Controller RAM Sector 7 (USB) Off"]
     #[inline(always)]
     pub fn rcrs7off(&self) -> RCRS7OFF_R {
-        RCRS7OFF_R::new(((self.bits >> 7) & 0x01) != 0)
+        RCRS7OFF_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - RAM Controller RAM Sector 0 Off"]
     #[inline(always)]
-    pub fn rcrs0off(&mut self) -> RCRS0OFF_W {
-        RCRS0OFF_W { w: self }
+    #[must_use]
+    pub fn rcrs0off(&mut self) -> RCRS0OFF_W<0> {
+        RCRS0OFF_W::new(self)
     }
     #[doc = "Bit 1 - RAM Controller RAM Sector 1 Off"]
     #[inline(always)]
-    pub fn rcrs1off(&mut self) -> RCRS1OFF_W {
-        RCRS1OFF_W { w: self }
+    #[must_use]
+    pub fn rcrs1off(&mut self) -> RCRS1OFF_W<1> {
+        RCRS1OFF_W::new(self)
     }
     #[doc = "Bit 2 - RAM Controller RAM Sector 2 Off"]
     #[inline(always)]
-    pub fn rcrs2off(&mut self) -> RCRS2OFF_W {
-        RCRS2OFF_W { w: self }
+    #[must_use]
+    pub fn rcrs2off(&mut self) -> RCRS2OFF_W<2> {
+        RCRS2OFF_W::new(self)
     }
     #[doc = "Bit 3 - RAM Controller RAM Sector 3 Off"]
     #[inline(always)]
-    pub fn rcrs3off(&mut self) -> RCRS3OFF_W {
-        RCRS3OFF_W { w: self }
+    #[must_use]
+    pub fn rcrs3off(&mut self) -> RCRS3OFF_W<3> {
+        RCRS3OFF_W::new(self)
     }
     #[doc = "Bit 7 - RAM Controller RAM Sector 7 (USB) Off"]
     #[inline(always)]
-    pub fn rcrs7off(&mut self) -> RCRS7OFF_W {
-        RCRS7OFF_W { w: self }
+    #[must_use]
+    pub fn rcrs7off(&mut self) -> RCRS7OFF_W<7> {
+        RCRS7OFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for RCCTL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [rcctl0::W](W) writer structure"]
 impl crate::Writable for RCCTL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RCCTL0 to value 0"]
 impl crate::Resettable for RCCTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

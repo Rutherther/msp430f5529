@@ -35,242 +35,82 @@ impl From<crate::W<SYSBSLC_SPEC>> for W {
     }
 }
 #[doc = "Field `SYSBSLSIZE0` reader - SYS - BSL Protection Size 0"]
-pub struct SYSBSLSIZE0_R(crate::FieldReader<bool, bool>);
-impl SYSBSLSIZE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSBSLSIZE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSBSLSIZE0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSBSLSIZE0_R = crate::BitReader<bool>;
 #[doc = "Field `SYSBSLSIZE0` writer - SYS - BSL Protection Size 0"]
-pub struct SYSBSLSIZE0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSBSLSIZE0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type SYSBSLSIZE0_W<'a, const O: u8> = crate::BitWriter<'a, u16, SYSBSLC_SPEC, bool, O>;
 #[doc = "Field `SYSBSLSIZE1` reader - SYS - BSL Protection Size 1"]
-pub struct SYSBSLSIZE1_R(crate::FieldReader<bool, bool>);
-impl SYSBSLSIZE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSBSLSIZE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSBSLSIZE1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSBSLSIZE1_R = crate::BitReader<bool>;
 #[doc = "Field `SYSBSLSIZE1` writer - SYS - BSL Protection Size 1"]
-pub struct SYSBSLSIZE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSBSLSIZE1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SYSBSLSIZE1_W<'a, const O: u8> = crate::BitWriter<'a, u16, SYSBSLC_SPEC, bool, O>;
 #[doc = "Field `SYSBSLR` reader - SYS - RAM assigned to BSL"]
-pub struct SYSBSLR_R(crate::FieldReader<bool, bool>);
-impl SYSBSLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSBSLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSBSLR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSBSLR_R = crate::BitReader<bool>;
 #[doc = "Field `SYSBSLR` writer - SYS - RAM assigned to BSL"]
-pub struct SYSBSLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSBSLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type SYSBSLR_W<'a, const O: u8> = crate::BitWriter<'a, u16, SYSBSLC_SPEC, bool, O>;
 #[doc = "Field `SYSBSLOFF` reader - SYS - BSL Memory disabled"]
-pub struct SYSBSLOFF_R(crate::FieldReader<bool, bool>);
-impl SYSBSLOFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSBSLOFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSBSLOFF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSBSLOFF_R = crate::BitReader<bool>;
 #[doc = "Field `SYSBSLOFF` writer - SYS - BSL Memory disabled"]
-pub struct SYSBSLOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSBSLOFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u16 & 0x01) << 14);
-        self.w
-    }
-}
+pub type SYSBSLOFF_W<'a, const O: u8> = crate::BitWriter<'a, u16, SYSBSLC_SPEC, bool, O>;
 #[doc = "Field `SYSBSLPE` reader - SYS - BSL Memory protection enabled"]
-pub struct SYSBSLPE_R(crate::FieldReader<bool, bool>);
-impl SYSBSLPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSBSLPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSBSLPE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSBSLPE_R = crate::BitReader<bool>;
 #[doc = "Field `SYSBSLPE` writer - SYS - BSL Memory protection enabled"]
-pub struct SYSBSLPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSBSLPE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u16 & 0x01) << 15);
-        self.w
-    }
-}
+pub type SYSBSLPE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SYSBSLC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - SYS - BSL Protection Size 0"]
     #[inline(always)]
     pub fn sysbslsize0(&self) -> SYSBSLSIZE0_R {
-        SYSBSLSIZE0_R::new((self.bits & 0x01) != 0)
+        SYSBSLSIZE0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SYS - BSL Protection Size 1"]
     #[inline(always)]
     pub fn sysbslsize1(&self) -> SYSBSLSIZE1_R {
-        SYSBSLSIZE1_R::new(((self.bits >> 1) & 0x01) != 0)
+        SYSBSLSIZE1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SYS - RAM assigned to BSL"]
     #[inline(always)]
     pub fn sysbslr(&self) -> SYSBSLR_R {
-        SYSBSLR_R::new(((self.bits >> 2) & 0x01) != 0)
+        SYSBSLR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 14 - SYS - BSL Memory disabled"]
     #[inline(always)]
     pub fn sysbsloff(&self) -> SYSBSLOFF_R {
-        SYSBSLOFF_R::new(((self.bits >> 14) & 0x01) != 0)
+        SYSBSLOFF_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - SYS - BSL Memory protection enabled"]
     #[inline(always)]
     pub fn sysbslpe(&self) -> SYSBSLPE_R {
-        SYSBSLPE_R::new(((self.bits >> 15) & 0x01) != 0)
+        SYSBSLPE_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - SYS - BSL Protection Size 0"]
     #[inline(always)]
-    pub fn sysbslsize0(&mut self) -> SYSBSLSIZE0_W {
-        SYSBSLSIZE0_W { w: self }
+    #[must_use]
+    pub fn sysbslsize0(&mut self) -> SYSBSLSIZE0_W<0> {
+        SYSBSLSIZE0_W::new(self)
     }
     #[doc = "Bit 1 - SYS - BSL Protection Size 1"]
     #[inline(always)]
-    pub fn sysbslsize1(&mut self) -> SYSBSLSIZE1_W {
-        SYSBSLSIZE1_W { w: self }
+    #[must_use]
+    pub fn sysbslsize1(&mut self) -> SYSBSLSIZE1_W<1> {
+        SYSBSLSIZE1_W::new(self)
     }
     #[doc = "Bit 2 - SYS - RAM assigned to BSL"]
     #[inline(always)]
-    pub fn sysbslr(&mut self) -> SYSBSLR_W {
-        SYSBSLR_W { w: self }
+    #[must_use]
+    pub fn sysbslr(&mut self) -> SYSBSLR_W<2> {
+        SYSBSLR_W::new(self)
     }
     #[doc = "Bit 14 - SYS - BSL Memory disabled"]
     #[inline(always)]
-    pub fn sysbsloff(&mut self) -> SYSBSLOFF_W {
-        SYSBSLOFF_W { w: self }
+    #[must_use]
+    pub fn sysbsloff(&mut self) -> SYSBSLOFF_W<14> {
+        SYSBSLOFF_W::new(self)
     }
     #[doc = "Bit 15 - SYS - BSL Memory protection enabled"]
     #[inline(always)]
-    pub fn sysbslpe(&mut self) -> SYSBSLPE_W {
-        SYSBSLPE_W { w: self }
+    #[must_use]
+    pub fn sysbslpe(&mut self) -> SYSBSLPE_W<15> {
+        SYSBSLPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for SYSBSLC_SPEC {
 #[doc = "`write(|w| ..)` method takes [sysbslc::W](W) writer structure"]
 impl crate::Writable for SYSBSLC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSBSLC to value 0"]
 impl crate::Resettable for SYSBSLC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

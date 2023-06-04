@@ -54,11 +54,10 @@ impl crate::Readable for MPYS32H_SPEC {
 #[doc = "`write(|w| ..)` method takes [mpys32h::W](W) writer structure"]
 impl crate::Writable for MPYS32H_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MPYS32H to value 0"]
 impl crate::Resettable for MPYS32H_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

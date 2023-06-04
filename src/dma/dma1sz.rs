@@ -54,11 +54,10 @@ impl crate::Readable for DMA1SZ_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma1sz::W](W) writer structure"]
 impl crate::Writable for DMA1SZ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA1SZ to value 0"]
 impl crate::Resettable for DMA1SZ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

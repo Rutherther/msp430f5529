@@ -35,242 +35,82 @@ impl From<crate::W<SVSMIO_SPEC>> for W {
     }
 }
 #[doc = "Field `SVMLOE` reader - SVM low side output enable"]
-pub struct SVMLOE_R(crate::FieldReader<bool, bool>);
-impl SVMLOE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMLOE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMLOE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMLOE_R = crate::BitReader<bool>;
 #[doc = "Field `SVMLOE` writer - SVM low side output enable"]
-pub struct SVMLOE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMLOE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SVMLOE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SVSMIO_SPEC, bool, O>;
 #[doc = "Field `SVMLVLROE` reader - SVM low side voltage level reached output enable"]
-pub struct SVMLVLROE_R(crate::FieldReader<bool, bool>);
-impl SVMLVLROE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMLVLROE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMLVLROE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMLVLROE_R = crate::BitReader<bool>;
 #[doc = "Field `SVMLVLROE` writer - SVM low side voltage level reached output enable"]
-pub struct SVMLVLROE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMLVLROE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type SVMLVLROE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SVSMIO_SPEC, bool, O>;
 #[doc = "Field `SVMOUTPOL` reader - SVMOUT pin polarity"]
-pub struct SVMOUTPOL_R(crate::FieldReader<bool, bool>);
-impl SVMOUTPOL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMOUTPOL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMOUTPOL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMOUTPOL_R = crate::BitReader<bool>;
 #[doc = "Field `SVMOUTPOL` writer - SVMOUT pin polarity"]
-pub struct SVMOUTPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMOUTPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type SVMOUTPOL_W<'a, const O: u8> = crate::BitWriter<'a, u16, SVSMIO_SPEC, bool, O>;
 #[doc = "Field `SVMHOE` reader - SVM high side output enable"]
-pub struct SVMHOE_R(crate::FieldReader<bool, bool>);
-impl SVMHOE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMHOE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMHOE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMHOE_R = crate::BitReader<bool>;
 #[doc = "Field `SVMHOE` writer - SVM high side output enable"]
-pub struct SVMHOE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMHOE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
-        self.w
-    }
-}
+pub type SVMHOE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SVSMIO_SPEC, bool, O>;
 #[doc = "Field `SVMHVLROE` reader - SVM high side voltage level reached output enable"]
-pub struct SVMHVLROE_R(crate::FieldReader<bool, bool>);
-impl SVMHVLROE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMHVLROE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMHVLROE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMHVLROE_R = crate::BitReader<bool>;
 #[doc = "Field `SVMHVLROE` writer - SVM high side voltage level reached output enable"]
-pub struct SVMHVLROE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMHVLROE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u16 & 0x01) << 12);
-        self.w
-    }
-}
+pub type SVMHVLROE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SVSMIO_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 3 - SVM low side output enable"]
     #[inline(always)]
     pub fn svmloe(&self) -> SVMLOE_R {
-        SVMLOE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SVMLOE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SVM low side voltage level reached output enable"]
     #[inline(always)]
     pub fn svmlvlroe(&self) -> SVMLVLROE_R {
-        SVMLVLROE_R::new(((self.bits >> 4) & 0x01) != 0)
+        SVMLVLROE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - SVMOUT pin polarity"]
     #[inline(always)]
     pub fn svmoutpol(&self) -> SVMOUTPOL_R {
-        SVMOUTPOL_R::new(((self.bits >> 5) & 0x01) != 0)
+        SVMOUTPOL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 11 - SVM high side output enable"]
     #[inline(always)]
     pub fn svmhoe(&self) -> SVMHOE_R {
-        SVMHOE_R::new(((self.bits >> 11) & 0x01) != 0)
+        SVMHOE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - SVM high side voltage level reached output enable"]
     #[inline(always)]
     pub fn svmhvlroe(&self) -> SVMHVLROE_R {
-        SVMHVLROE_R::new(((self.bits >> 12) & 0x01) != 0)
+        SVMHVLROE_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 3 - SVM low side output enable"]
     #[inline(always)]
-    pub fn svmloe(&mut self) -> SVMLOE_W {
-        SVMLOE_W { w: self }
+    #[must_use]
+    pub fn svmloe(&mut self) -> SVMLOE_W<3> {
+        SVMLOE_W::new(self)
     }
     #[doc = "Bit 4 - SVM low side voltage level reached output enable"]
     #[inline(always)]
-    pub fn svmlvlroe(&mut self) -> SVMLVLROE_W {
-        SVMLVLROE_W { w: self }
+    #[must_use]
+    pub fn svmlvlroe(&mut self) -> SVMLVLROE_W<4> {
+        SVMLVLROE_W::new(self)
     }
     #[doc = "Bit 5 - SVMOUT pin polarity"]
     #[inline(always)]
-    pub fn svmoutpol(&mut self) -> SVMOUTPOL_W {
-        SVMOUTPOL_W { w: self }
+    #[must_use]
+    pub fn svmoutpol(&mut self) -> SVMOUTPOL_W<5> {
+        SVMOUTPOL_W::new(self)
     }
     #[doc = "Bit 11 - SVM high side output enable"]
     #[inline(always)]
-    pub fn svmhoe(&mut self) -> SVMHOE_W {
-        SVMHOE_W { w: self }
+    #[must_use]
+    pub fn svmhoe(&mut self) -> SVMHOE_W<11> {
+        SVMHOE_W::new(self)
     }
     #[doc = "Bit 12 - SVM high side voltage level reached output enable"]
     #[inline(always)]
-    pub fn svmhvlroe(&mut self) -> SVMHVLROE_W {
-        SVMHVLROE_W { w: self }
+    #[must_use]
+    pub fn svmhvlroe(&mut self) -> SVMHVLROE_W<12> {
+        SVMHVLROE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for SVSMIO_SPEC {
 #[doc = "`write(|w| ..)` method takes [svsmio::W](W) writer structure"]
 impl crate::Writable for SVSMIO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SVSMIO to value 0"]
 impl crate::Resettable for SVSMIO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

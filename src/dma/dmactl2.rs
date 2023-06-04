@@ -54,11 +54,10 @@ impl crate::Readable for DMACTL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmactl2::W](W) writer structure"]
 impl crate::Writable for DMACTL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMACTL2 to value 0"]
 impl crate::Resettable for DMACTL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

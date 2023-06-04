@@ -35,388 +35,132 @@ impl From<crate::W<P7SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `P7SEL0` reader - P7SEL0"]
-pub struct P7SEL0_R(crate::FieldReader<bool, bool>);
-impl P7SEL0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL0_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL0` writer - P7SEL0"]
-pub struct P7SEL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type P7SEL0_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL1` reader - P7SEL1"]
-pub struct P7SEL1_R(crate::FieldReader<bool, bool>);
-impl P7SEL1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL1_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL1` writer - P7SEL1"]
-pub struct P7SEL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
-        self.w
-    }
-}
+pub type P7SEL1_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL2` reader - P7SEL2"]
-pub struct P7SEL2_R(crate::FieldReader<bool, bool>);
-impl P7SEL2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL2_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL2` writer - P7SEL2"]
-pub struct P7SEL2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
+pub type P7SEL2_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL3` reader - P7SEL3"]
-pub struct P7SEL3_R(crate::FieldReader<bool, bool>);
-impl P7SEL3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL3_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL3` writer - P7SEL3"]
-pub struct P7SEL3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type P7SEL3_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL4` reader - P7SEL4"]
-pub struct P7SEL4_R(crate::FieldReader<bool, bool>);
-impl P7SEL4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL4_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL4` writer - P7SEL4"]
-pub struct P7SEL4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
+pub type P7SEL4_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL5` reader - P7SEL5"]
-pub struct P7SEL5_R(crate::FieldReader<bool, bool>);
-impl P7SEL5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL5_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL5` writer - P7SEL5"]
-pub struct P7SEL5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type P7SEL5_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL6` reader - P7SEL6"]
-pub struct P7SEL6_R(crate::FieldReader<bool, bool>);
-impl P7SEL6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL6_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL6` writer - P7SEL6"]
-pub struct P7SEL6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
+pub type P7SEL6_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 #[doc = "Field `P7SEL7` reader - P7SEL7"]
-pub struct P7SEL7_R(crate::FieldReader<bool, bool>);
-impl P7SEL7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        P7SEL7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for P7SEL7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type P7SEL7_R = crate::BitReader<bool>;
 #[doc = "Field `P7SEL7` writer - P7SEL7"]
-pub struct P7SEL7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> P7SEL7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
+pub type P7SEL7_W<'a, const O: u8> = crate::BitWriter<'a, u8, P7SEL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - P7SEL0"]
     #[inline(always)]
     pub fn p7sel0(&self) -> P7SEL0_R {
-        P7SEL0_R::new((self.bits & 0x01) != 0)
+        P7SEL0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - P7SEL1"]
     #[inline(always)]
     pub fn p7sel1(&self) -> P7SEL1_R {
-        P7SEL1_R::new(((self.bits >> 1) & 0x01) != 0)
+        P7SEL1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - P7SEL2"]
     #[inline(always)]
     pub fn p7sel2(&self) -> P7SEL2_R {
-        P7SEL2_R::new(((self.bits >> 2) & 0x01) != 0)
+        P7SEL2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - P7SEL3"]
     #[inline(always)]
     pub fn p7sel3(&self) -> P7SEL3_R {
-        P7SEL3_R::new(((self.bits >> 3) & 0x01) != 0)
+        P7SEL3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - P7SEL4"]
     #[inline(always)]
     pub fn p7sel4(&self) -> P7SEL4_R {
-        P7SEL4_R::new(((self.bits >> 4) & 0x01) != 0)
+        P7SEL4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - P7SEL5"]
     #[inline(always)]
     pub fn p7sel5(&self) -> P7SEL5_R {
-        P7SEL5_R::new(((self.bits >> 5) & 0x01) != 0)
+        P7SEL5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - P7SEL6"]
     #[inline(always)]
     pub fn p7sel6(&self) -> P7SEL6_R {
-        P7SEL6_R::new(((self.bits >> 6) & 0x01) != 0)
+        P7SEL6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - P7SEL7"]
     #[inline(always)]
     pub fn p7sel7(&self) -> P7SEL7_R {
-        P7SEL7_R::new(((self.bits >> 7) & 0x01) != 0)
+        P7SEL7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - P7SEL0"]
     #[inline(always)]
-    pub fn p7sel0(&mut self) -> P7SEL0_W {
-        P7SEL0_W { w: self }
+    #[must_use]
+    pub fn p7sel0(&mut self) -> P7SEL0_W<0> {
+        P7SEL0_W::new(self)
     }
     #[doc = "Bit 1 - P7SEL1"]
     #[inline(always)]
-    pub fn p7sel1(&mut self) -> P7SEL1_W {
-        P7SEL1_W { w: self }
+    #[must_use]
+    pub fn p7sel1(&mut self) -> P7SEL1_W<1> {
+        P7SEL1_W::new(self)
     }
     #[doc = "Bit 2 - P7SEL2"]
     #[inline(always)]
-    pub fn p7sel2(&mut self) -> P7SEL2_W {
-        P7SEL2_W { w: self }
+    #[must_use]
+    pub fn p7sel2(&mut self) -> P7SEL2_W<2> {
+        P7SEL2_W::new(self)
     }
     #[doc = "Bit 3 - P7SEL3"]
     #[inline(always)]
-    pub fn p7sel3(&mut self) -> P7SEL3_W {
-        P7SEL3_W { w: self }
+    #[must_use]
+    pub fn p7sel3(&mut self) -> P7SEL3_W<3> {
+        P7SEL3_W::new(self)
     }
     #[doc = "Bit 4 - P7SEL4"]
     #[inline(always)]
-    pub fn p7sel4(&mut self) -> P7SEL4_W {
-        P7SEL4_W { w: self }
+    #[must_use]
+    pub fn p7sel4(&mut self) -> P7SEL4_W<4> {
+        P7SEL4_W::new(self)
     }
     #[doc = "Bit 5 - P7SEL5"]
     #[inline(always)]
-    pub fn p7sel5(&mut self) -> P7SEL5_W {
-        P7SEL5_W { w: self }
+    #[must_use]
+    pub fn p7sel5(&mut self) -> P7SEL5_W<5> {
+        P7SEL5_W::new(self)
     }
     #[doc = "Bit 6 - P7SEL6"]
     #[inline(always)]
-    pub fn p7sel6(&mut self) -> P7SEL6_W {
-        P7SEL6_W { w: self }
+    #[must_use]
+    pub fn p7sel6(&mut self) -> P7SEL6_W<6> {
+        P7SEL6_W::new(self)
     }
     #[doc = "Bit 7 - P7SEL7"]
     #[inline(always)]
-    pub fn p7sel7(&mut self) -> P7SEL7_W {
-        P7SEL7_W { w: self }
+    #[must_use]
+    pub fn p7sel7(&mut self) -> P7SEL7_W<7> {
+        P7SEL7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
+        unsafe { self.0.bits(bits) };
         self
     }
 }
@@ -432,11 +176,10 @@ impl crate::Readable for P7SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [p7sel::W](W) writer structure"]
 impl crate::Writable for P7SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P7SEL to value 0"]
 impl crate::Resettable for P7SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

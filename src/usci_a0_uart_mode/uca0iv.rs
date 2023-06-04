@@ -54,11 +54,10 @@ impl crate::Readable for UCA0IV_SPEC {
 #[doc = "`write(|w| ..)` method takes [uca0iv::W](W) writer structure"]
 impl crate::Writable for UCA0IV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCA0IV to value 0"]
 impl crate::Resettable for UCA0IV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

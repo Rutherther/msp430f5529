@@ -35,242 +35,82 @@ impl From<crate::W<USBCNF_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_EN` reader - USB - Module enable"]
-pub struct USB_EN_R(crate::FieldReader<bool, bool>);
-impl USB_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_EN_R = crate::BitReader<bool>;
 #[doc = "Field `USB_EN` writer - USB - Module enable"]
-pub struct USB_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type USB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBCNF_SPEC, bool, O>;
 #[doc = "Field `PUR_EN` reader - USB - PUR pin enable"]
-pub struct PUR_EN_R(crate::FieldReader<bool, bool>);
-impl PUR_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUR_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUR_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PUR_EN` writer - USB - PUR pin enable"]
-pub struct PUR_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUR_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PUR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBCNF_SPEC, bool, O>;
 #[doc = "Field `PUR_IN` reader - USB - PUR pin input value"]
-pub struct PUR_IN_R(crate::FieldReader<bool, bool>);
-impl PUR_IN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUR_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUR_IN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PUR_IN_R = crate::BitReader<bool>;
 #[doc = "Field `PUR_IN` writer - USB - PUR pin input value"]
-pub struct PUR_IN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUR_IN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type PUR_IN_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBCNF_SPEC, bool, O>;
 #[doc = "Field `BLKRDY` reader - USB - Block ready signal for DMA"]
-pub struct BLKRDY_R(crate::FieldReader<bool, bool>);
-impl BLKRDY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BLKRDY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLKRDY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLKRDY_R = crate::BitReader<bool>;
 #[doc = "Field `BLKRDY` writer - USB - Block ready signal for DMA"]
-pub struct BLKRDY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLKRDY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type BLKRDY_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBCNF_SPEC, bool, O>;
 #[doc = "Field `FNTEN` reader - USB - Frame Number receive Trigger enable for DMA"]
-pub struct FNTEN_R(crate::FieldReader<bool, bool>);
-impl FNTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FNTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FNTEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FNTEN_R = crate::BitReader<bool>;
 #[doc = "Field `FNTEN` writer - USB - Frame Number receive Trigger enable for DMA"]
-pub struct FNTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FNTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type FNTEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, USBCNF_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - USB - Module enable"]
     #[inline(always)]
     pub fn usb_en(&self) -> USB_EN_R {
-        USB_EN_R::new((self.bits & 0x01) != 0)
+        USB_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USB - PUR pin enable"]
     #[inline(always)]
     pub fn pur_en(&self) -> PUR_EN_R {
-        PUR_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        PUR_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB - PUR pin input value"]
     #[inline(always)]
     pub fn pur_in(&self) -> PUR_IN_R {
-        PUR_IN_R::new(((self.bits >> 2) & 0x01) != 0)
+        PUR_IN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USB - Block ready signal for DMA"]
     #[inline(always)]
     pub fn blkrdy(&self) -> BLKRDY_R {
-        BLKRDY_R::new(((self.bits >> 3) & 0x01) != 0)
+        BLKRDY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB - Frame Number receive Trigger enable for DMA"]
     #[inline(always)]
     pub fn fnten(&self) -> FNTEN_R {
-        FNTEN_R::new(((self.bits >> 4) & 0x01) != 0)
+        FNTEN_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - USB - Module enable"]
     #[inline(always)]
-    pub fn usb_en(&mut self) -> USB_EN_W {
-        USB_EN_W { w: self }
+    #[must_use]
+    pub fn usb_en(&mut self) -> USB_EN_W<0> {
+        USB_EN_W::new(self)
     }
     #[doc = "Bit 1 - USB - PUR pin enable"]
     #[inline(always)]
-    pub fn pur_en(&mut self) -> PUR_EN_W {
-        PUR_EN_W { w: self }
+    #[must_use]
+    pub fn pur_en(&mut self) -> PUR_EN_W<1> {
+        PUR_EN_W::new(self)
     }
     #[doc = "Bit 2 - USB - PUR pin input value"]
     #[inline(always)]
-    pub fn pur_in(&mut self) -> PUR_IN_W {
-        PUR_IN_W { w: self }
+    #[must_use]
+    pub fn pur_in(&mut self) -> PUR_IN_W<2> {
+        PUR_IN_W::new(self)
     }
     #[doc = "Bit 3 - USB - Block ready signal for DMA"]
     #[inline(always)]
-    pub fn blkrdy(&mut self) -> BLKRDY_W {
-        BLKRDY_W { w: self }
+    #[must_use]
+    pub fn blkrdy(&mut self) -> BLKRDY_W<3> {
+        BLKRDY_W::new(self)
     }
     #[doc = "Bit 4 - USB - Frame Number receive Trigger enable for DMA"]
     #[inline(always)]
-    pub fn fnten(&mut self) -> FNTEN_W {
-        FNTEN_W { w: self }
+    #[must_use]
+    pub fn fnten(&mut self) -> FNTEN_W<4> {
+        FNTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for USBCNF_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbcnf::W](W) writer structure"]
 impl crate::Writable for USBCNF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBCNF to value 0"]
 impl crate::Resettable for USBCNF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

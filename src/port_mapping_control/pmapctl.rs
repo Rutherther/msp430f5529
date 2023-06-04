@@ -35,101 +35,37 @@ impl From<crate::W<PMAPCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `PMAPLOCKED` reader - Port Mapping Lock bit. Read only"]
-pub struct PMAPLOCKED_R(crate::FieldReader<bool, bool>);
-impl PMAPLOCKED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAPLOCKED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAPLOCKED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAPLOCKED_R = crate::BitReader<bool>;
 #[doc = "Field `PMAPLOCKED` writer - Port Mapping Lock bit. Read only"]
-pub struct PMAPLOCKED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAPLOCKED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type PMAPLOCKED_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMAPCTL_SPEC, bool, O>;
 #[doc = "Field `PMAPRECFG` reader - Port Mapping re-configuration control bit"]
-pub struct PMAPRECFG_R(crate::FieldReader<bool, bool>);
-impl PMAPRECFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PMAPRECFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PMAPRECFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PMAPRECFG_R = crate::BitReader<bool>;
 #[doc = "Field `PMAPRECFG` writer - Port Mapping re-configuration control bit"]
-pub struct PMAPRECFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PMAPRECFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type PMAPRECFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, PMAPCTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Port Mapping Lock bit. Read only"]
     #[inline(always)]
     pub fn pmaplocked(&self) -> PMAPLOCKED_R {
-        PMAPLOCKED_R::new((self.bits & 0x01) != 0)
+        PMAPLOCKED_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Port Mapping re-configuration control bit"]
     #[inline(always)]
     pub fn pmaprecfg(&self) -> PMAPRECFG_R {
-        PMAPRECFG_R::new(((self.bits >> 1) & 0x01) != 0)
+        PMAPRECFG_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Port Mapping Lock bit. Read only"]
     #[inline(always)]
-    pub fn pmaplocked(&mut self) -> PMAPLOCKED_W {
-        PMAPLOCKED_W { w: self }
+    #[must_use]
+    pub fn pmaplocked(&mut self) -> PMAPLOCKED_W<0> {
+        PMAPLOCKED_W::new(self)
     }
     #[doc = "Bit 1 - Port Mapping re-configuration control bit"]
     #[inline(always)]
-    pub fn pmaprecfg(&mut self) -> PMAPRECFG_W {
-        PMAPRECFG_W { w: self }
+    #[must_use]
+    pub fn pmaprecfg(&mut self) -> PMAPRECFG_W<1> {
+        PMAPRECFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +86,10 @@ impl crate::Readable for PMAPCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pmapctl::W](W) writer structure"]
 impl crate::Writable for PMAPCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PMAPCTL to value 0"]
 impl crate::Resettable for PMAPCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

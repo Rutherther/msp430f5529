@@ -35,195 +35,67 @@ impl From<crate::W<SFRRPCR_SPEC>> for W {
     }
 }
 #[doc = "Field `SYSNMI` reader - NMI select"]
-pub struct SYSNMI_R(crate::FieldReader<bool, bool>);
-impl SYSNMI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSNMI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSNMI_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSNMI_R = crate::BitReader<bool>;
 #[doc = "Field `SYSNMI` writer - NMI select"]
-pub struct SYSNMI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSNMI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type SYSNMI_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRRPCR_SPEC, bool, O>;
 #[doc = "Field `SYSNMIIES` reader - NMI edge select"]
-pub struct SYSNMIIES_R(crate::FieldReader<bool, bool>);
-impl SYSNMIIES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSNMIIES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSNMIIES_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSNMIIES_R = crate::BitReader<bool>;
 #[doc = "Field `SYSNMIIES` writer - NMI edge select"]
-pub struct SYSNMIIES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSNMIIES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type SYSNMIIES_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRRPCR_SPEC, bool, O>;
 #[doc = "Field `SYSRSTUP` reader - RESET Pin pull down/up select"]
-pub struct SYSRSTUP_R(crate::FieldReader<bool, bool>);
-impl SYSRSTUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSRSTUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSRSTUP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSRSTUP_R = crate::BitReader<bool>;
 #[doc = "Field `SYSRSTUP` writer - RESET Pin pull down/up select"]
-pub struct SYSRSTUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSRSTUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type SYSRSTUP_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRRPCR_SPEC, bool, O>;
 #[doc = "Field `SYSRSTRE` reader - RESET Pin Resistor enable"]
-pub struct SYSRSTRE_R(crate::FieldReader<bool, bool>);
-impl SYSRSTRE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYSRSTRE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYSRSTRE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYSRSTRE_R = crate::BitReader<bool>;
 #[doc = "Field `SYSRSTRE` writer - RESET Pin Resistor enable"]
-pub struct SYSRSTRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYSRSTRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SYSRSTRE_W<'a, const O: u8> = crate::BitWriter<'a, u16, SFRRPCR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - NMI select"]
     #[inline(always)]
     pub fn sysnmi(&self) -> SYSNMI_R {
-        SYSNMI_R::new((self.bits & 0x01) != 0)
+        SYSNMI_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - NMI edge select"]
     #[inline(always)]
     pub fn sysnmiies(&self) -> SYSNMIIES_R {
-        SYSNMIIES_R::new(((self.bits >> 1) & 0x01) != 0)
+        SYSNMIIES_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RESET Pin pull down/up select"]
     #[inline(always)]
     pub fn sysrstup(&self) -> SYSRSTUP_R {
-        SYSRSTUP_R::new(((self.bits >> 2) & 0x01) != 0)
+        SYSRSTUP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RESET Pin Resistor enable"]
     #[inline(always)]
     pub fn sysrstre(&self) -> SYSRSTRE_R {
-        SYSRSTRE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SYSRSTRE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - NMI select"]
     #[inline(always)]
-    pub fn sysnmi(&mut self) -> SYSNMI_W {
-        SYSNMI_W { w: self }
+    #[must_use]
+    pub fn sysnmi(&mut self) -> SYSNMI_W<0> {
+        SYSNMI_W::new(self)
     }
     #[doc = "Bit 1 - NMI edge select"]
     #[inline(always)]
-    pub fn sysnmiies(&mut self) -> SYSNMIIES_W {
-        SYSNMIIES_W { w: self }
+    #[must_use]
+    pub fn sysnmiies(&mut self) -> SYSNMIIES_W<1> {
+        SYSNMIIES_W::new(self)
     }
     #[doc = "Bit 2 - RESET Pin pull down/up select"]
     #[inline(always)]
-    pub fn sysrstup(&mut self) -> SYSRSTUP_W {
-        SYSRSTUP_W { w: self }
+    #[must_use]
+    pub fn sysrstup(&mut self) -> SYSRSTUP_W<2> {
+        SYSRSTUP_W::new(self)
     }
     #[doc = "Bit 3 - RESET Pin Resistor enable"]
     #[inline(always)]
-    pub fn sysrstre(&mut self) -> SYSRSTRE_W {
-        SYSRSTRE_W { w: self }
+    #[must_use]
+    pub fn sysrstre(&mut self) -> SYSRSTRE_W<3> {
+        SYSRSTRE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for SFRRPCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [sfrrpcr::W](W) writer structure"]
 impl crate::Writable for SFRRPCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SFRRPCR to value 0"]
 impl crate::Resettable for SFRRPCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

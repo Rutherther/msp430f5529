@@ -54,11 +54,10 @@ impl crate::Readable for P1IV_SPEC {
 #[doc = "`write(|w| ..)` method takes [p1iv::W](W) writer structure"]
 impl crate::Writable for P1IV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets P1IV to value 0"]
 impl crate::Resettable for P1IV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

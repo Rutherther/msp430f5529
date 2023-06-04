@@ -35,242 +35,82 @@ impl From<crate::W<USBOEPCNF_6_SPEC>> for W {
     }
 }
 #[doc = "Field `USBIIE` reader - USB - Transaction Interrupt indication enable"]
-pub struct USBIIE_R(crate::FieldReader<bool, bool>);
-impl USBIIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USBIIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USBIIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USBIIE_R = crate::BitReader<bool>;
 #[doc = "Field `USBIIE` writer - USB - Transaction Interrupt indication enable"]
-pub struct USBIIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USBIIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
-        self.w
-    }
-}
+pub type USBIIE_W<'a, const O: u8> = crate::BitWriter<'a, u8, USBOEPCNF_6_SPEC, bool, O>;
 #[doc = "Field `STALL` reader - USB - Stall Condition"]
-pub struct STALL_R(crate::FieldReader<bool, bool>);
-impl STALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STALL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STALL_R = crate::BitReader<bool>;
 #[doc = "Field `STALL` writer - USB - Stall Condition"]
-pub struct STALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STALL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u8, USBOEPCNF_6_SPEC, bool, O>;
 #[doc = "Field `DBUF` reader - USB - Double Buffer Enable"]
-pub struct DBUF_R(crate::FieldReader<bool, bool>);
-impl DBUF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUF_R = crate::BitReader<bool>;
 #[doc = "Field `DBUF` writer - USB - Double Buffer Enable"]
-pub struct DBUF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBUF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
-        self.w
-    }
-}
+pub type DBUF_W<'a, const O: u8> = crate::BitWriter<'a, u8, USBOEPCNF_6_SPEC, bool, O>;
 #[doc = "Field `TOGGLE` reader - USB - Toggle Bit"]
-pub struct TOGGLE_R(crate::FieldReader<bool, bool>);
-impl TOGGLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOGGLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOGGLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOGGLE_R = crate::BitReader<bool>;
 #[doc = "Field `TOGGLE` writer - USB - Toggle Bit"]
-pub struct TOGGLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOGGLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type TOGGLE_W<'a, const O: u8> = crate::BitWriter<'a, u8, USBOEPCNF_6_SPEC, bool, O>;
 #[doc = "Field `UBME` reader - USB - UBM In-Endpoint Enable"]
-pub struct UBME_R(crate::FieldReader<bool, bool>);
-impl UBME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UBME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UBME_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UBME_R = crate::BitReader<bool>;
 #[doc = "Field `UBME` writer - USB - UBM In-Endpoint Enable"]
-pub struct UBME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UBME_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
+pub type UBME_W<'a, const O: u8> = crate::BitWriter<'a, u8, USBOEPCNF_6_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 2 - USB - Transaction Interrupt indication enable"]
     #[inline(always)]
     pub fn usbiie(&self) -> USBIIE_R {
-        USBIIE_R::new(((self.bits >> 2) & 0x01) != 0)
+        USBIIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USB - Stall Condition"]
     #[inline(always)]
     pub fn stall(&self) -> STALL_R {
-        STALL_R::new(((self.bits >> 3) & 0x01) != 0)
+        STALL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB - Double Buffer Enable"]
     #[inline(always)]
     pub fn dbuf(&self) -> DBUF_R {
-        DBUF_R::new(((self.bits >> 4) & 0x01) != 0)
+        DBUF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USB - Toggle Bit"]
     #[inline(always)]
     pub fn toggle(&self) -> TOGGLE_R {
-        TOGGLE_R::new(((self.bits >> 5) & 0x01) != 0)
+        TOGGLE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - USB - UBM In-Endpoint Enable"]
     #[inline(always)]
     pub fn ubme(&self) -> UBME_R {
-        UBME_R::new(((self.bits >> 7) & 0x01) != 0)
+        UBME_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 2 - USB - Transaction Interrupt indication enable"]
     #[inline(always)]
-    pub fn usbiie(&mut self) -> USBIIE_W {
-        USBIIE_W { w: self }
+    #[must_use]
+    pub fn usbiie(&mut self) -> USBIIE_W<2> {
+        USBIIE_W::new(self)
     }
     #[doc = "Bit 3 - USB - Stall Condition"]
     #[inline(always)]
-    pub fn stall(&mut self) -> STALL_W {
-        STALL_W { w: self }
+    #[must_use]
+    pub fn stall(&mut self) -> STALL_W<3> {
+        STALL_W::new(self)
     }
     #[doc = "Bit 4 - USB - Double Buffer Enable"]
     #[inline(always)]
-    pub fn dbuf(&mut self) -> DBUF_W {
-        DBUF_W { w: self }
+    #[must_use]
+    pub fn dbuf(&mut self) -> DBUF_W<4> {
+        DBUF_W::new(self)
     }
     #[doc = "Bit 5 - USB - Toggle Bit"]
     #[inline(always)]
-    pub fn toggle(&mut self) -> TOGGLE_W {
-        TOGGLE_W { w: self }
+    #[must_use]
+    pub fn toggle(&mut self) -> TOGGLE_W<5> {
+        TOGGLE_W::new(self)
     }
     #[doc = "Bit 7 - USB - UBM In-Endpoint Enable"]
     #[inline(always)]
-    pub fn ubme(&mut self) -> UBME_W {
-        UBME_W { w: self }
+    #[must_use]
+    pub fn ubme(&mut self) -> UBME_W<7> {
+        UBME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for USBOEPCNF_6_SPEC {
 #[doc = "`write(|w| ..)` method takes [usboepcnf_6::W](W) writer structure"]
 impl crate::Writable for USBOEPCNF_6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBOEPCNF_6 to value 0"]
 impl crate::Resettable for USBOEPCNF_6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

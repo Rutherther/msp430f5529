@@ -35,195 +35,67 @@ impl From<crate::W<UCSCTL8_SPEC>> for W {
     }
 }
 #[doc = "Field `ACLKREQEN` reader - ACLK Clock Request Enable"]
-pub struct ACLKREQEN_R(crate::FieldReader<bool, bool>);
-impl ACLKREQEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACLKREQEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACLKREQEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACLKREQEN_R = crate::BitReader<bool>;
 #[doc = "Field `ACLKREQEN` writer - ACLK Clock Request Enable"]
-pub struct ACLKREQEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACLKREQEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type ACLKREQEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL8_SPEC, bool, O>;
 #[doc = "Field `MCLKREQEN` reader - MCLK Clock Request Enable"]
-pub struct MCLKREQEN_R(crate::FieldReader<bool, bool>);
-impl MCLKREQEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MCLKREQEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MCLKREQEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MCLKREQEN_R = crate::BitReader<bool>;
 #[doc = "Field `MCLKREQEN` writer - MCLK Clock Request Enable"]
-pub struct MCLKREQEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MCLKREQEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type MCLKREQEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL8_SPEC, bool, O>;
 #[doc = "Field `SMCLKREQEN` reader - SMCLK Clock Request Enable"]
-pub struct SMCLKREQEN_R(crate::FieldReader<bool, bool>);
-impl SMCLKREQEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SMCLKREQEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SMCLKREQEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SMCLKREQEN_R = crate::BitReader<bool>;
 #[doc = "Field `SMCLKREQEN` writer - SMCLK Clock Request Enable"]
-pub struct SMCLKREQEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SMCLKREQEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type SMCLKREQEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL8_SPEC, bool, O>;
 #[doc = "Field `MODOSCREQEN` reader - MODOSC Clock Request Enable"]
-pub struct MODOSCREQEN_R(crate::FieldReader<bool, bool>);
-impl MODOSCREQEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MODOSCREQEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODOSCREQEN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODOSCREQEN_R = crate::BitReader<bool>;
 #[doc = "Field `MODOSCREQEN` writer - MODOSC Clock Request Enable"]
-pub struct MODOSCREQEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODOSCREQEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type MODOSCREQEN_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL8_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - ACLK Clock Request Enable"]
     #[inline(always)]
     pub fn aclkreqen(&self) -> ACLKREQEN_R {
-        ACLKREQEN_R::new((self.bits & 0x01) != 0)
+        ACLKREQEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - MCLK Clock Request Enable"]
     #[inline(always)]
     pub fn mclkreqen(&self) -> MCLKREQEN_R {
-        MCLKREQEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        MCLKREQEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SMCLK Clock Request Enable"]
     #[inline(always)]
     pub fn smclkreqen(&self) -> SMCLKREQEN_R {
-        SMCLKREQEN_R::new(((self.bits >> 2) & 0x01) != 0)
+        SMCLKREQEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - MODOSC Clock Request Enable"]
     #[inline(always)]
     pub fn modoscreqen(&self) -> MODOSCREQEN_R {
-        MODOSCREQEN_R::new(((self.bits >> 3) & 0x01) != 0)
+        MODOSCREQEN_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - ACLK Clock Request Enable"]
     #[inline(always)]
-    pub fn aclkreqen(&mut self) -> ACLKREQEN_W {
-        ACLKREQEN_W { w: self }
+    #[must_use]
+    pub fn aclkreqen(&mut self) -> ACLKREQEN_W<0> {
+        ACLKREQEN_W::new(self)
     }
     #[doc = "Bit 1 - MCLK Clock Request Enable"]
     #[inline(always)]
-    pub fn mclkreqen(&mut self) -> MCLKREQEN_W {
-        MCLKREQEN_W { w: self }
+    #[must_use]
+    pub fn mclkreqen(&mut self) -> MCLKREQEN_W<1> {
+        MCLKREQEN_W::new(self)
     }
     #[doc = "Bit 2 - SMCLK Clock Request Enable"]
     #[inline(always)]
-    pub fn smclkreqen(&mut self) -> SMCLKREQEN_W {
-        SMCLKREQEN_W { w: self }
+    #[must_use]
+    pub fn smclkreqen(&mut self) -> SMCLKREQEN_W<2> {
+        SMCLKREQEN_W::new(self)
     }
     #[doc = "Bit 3 - MODOSC Clock Request Enable"]
     #[inline(always)]
-    pub fn modoscreqen(&mut self) -> MODOSCREQEN_W {
-        MODOSCREQEN_W { w: self }
+    #[must_use]
+    pub fn modoscreqen(&mut self) -> MODOSCREQEN_W<3> {
+        MODOSCREQEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for UCSCTL8_SPEC {
 #[doc = "`write(|w| ..)` method takes [ucsctl8::W](W) writer structure"]
 impl crate::Writable for UCSCTL8_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCSCTL8 to value 0"]
 impl crate::Resettable for UCSCTL8_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

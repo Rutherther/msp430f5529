@@ -34,8 +34,10 @@ impl From<crate::W<CBCTL2_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `CBREF0` reader - Comp. B Reference 0 Resistor Select Bit : 0"]
+pub type CBREF0_R = crate::FieldReader<u8, CBREF0_A>;
 #[doc = "Comp. B Reference 0 Resistor Select Bit : 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBREF0_A {
     #[doc = "0: Comp. B Int. Ref.0 Select 0 : 1/32"]
@@ -109,14 +111,8 @@ impl From<CBREF0_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBREF0` reader - Comp. B Reference 0 Resistor Select Bit : 0"]
-pub struct CBREF0_R(crate::FieldReader<u8, CBREF0_A>);
 impl CBREF0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBREF0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBREF0_A {
         match self.bits {
@@ -158,181 +154,168 @@ impl CBREF0_R {
     #[doc = "Checks if the value of the field is `CBREF0_0`"]
     #[inline(always)]
     pub fn is_cbref0_0(&self) -> bool {
-        **self == CBREF0_A::CBREF0_0
+        *self == CBREF0_A::CBREF0_0
     }
     #[doc = "Checks if the value of the field is `CBREF0_1`"]
     #[inline(always)]
     pub fn is_cbref0_1(&self) -> bool {
-        **self == CBREF0_A::CBREF0_1
+        *self == CBREF0_A::CBREF0_1
     }
     #[doc = "Checks if the value of the field is `CBREF0_2`"]
     #[inline(always)]
     pub fn is_cbref0_2(&self) -> bool {
-        **self == CBREF0_A::CBREF0_2
+        *self == CBREF0_A::CBREF0_2
     }
     #[doc = "Checks if the value of the field is `CBREF0_3`"]
     #[inline(always)]
     pub fn is_cbref0_3(&self) -> bool {
-        **self == CBREF0_A::CBREF0_3
+        *self == CBREF0_A::CBREF0_3
     }
     #[doc = "Checks if the value of the field is `CBREF0_4`"]
     #[inline(always)]
     pub fn is_cbref0_4(&self) -> bool {
-        **self == CBREF0_A::CBREF0_4
+        *self == CBREF0_A::CBREF0_4
     }
     #[doc = "Checks if the value of the field is `CBREF0_5`"]
     #[inline(always)]
     pub fn is_cbref0_5(&self) -> bool {
-        **self == CBREF0_A::CBREF0_5
+        *self == CBREF0_A::CBREF0_5
     }
     #[doc = "Checks if the value of the field is `CBREF0_6`"]
     #[inline(always)]
     pub fn is_cbref0_6(&self) -> bool {
-        **self == CBREF0_A::CBREF0_6
+        *self == CBREF0_A::CBREF0_6
     }
     #[doc = "Checks if the value of the field is `CBREF0_7`"]
     #[inline(always)]
     pub fn is_cbref0_7(&self) -> bool {
-        **self == CBREF0_A::CBREF0_7
+        *self == CBREF0_A::CBREF0_7
     }
     #[doc = "Checks if the value of the field is `CBREF0_8`"]
     #[inline(always)]
     pub fn is_cbref0_8(&self) -> bool {
-        **self == CBREF0_A::CBREF0_8
+        *self == CBREF0_A::CBREF0_8
     }
     #[doc = "Checks if the value of the field is `CBREF0_9`"]
     #[inline(always)]
     pub fn is_cbref0_9(&self) -> bool {
-        **self == CBREF0_A::CBREF0_9
+        *self == CBREF0_A::CBREF0_9
     }
     #[doc = "Checks if the value of the field is `CBREF0_10`"]
     #[inline(always)]
     pub fn is_cbref0_10(&self) -> bool {
-        **self == CBREF0_A::CBREF0_10
+        *self == CBREF0_A::CBREF0_10
     }
     #[doc = "Checks if the value of the field is `CBREF0_11`"]
     #[inline(always)]
     pub fn is_cbref0_11(&self) -> bool {
-        **self == CBREF0_A::CBREF0_11
+        *self == CBREF0_A::CBREF0_11
     }
     #[doc = "Checks if the value of the field is `CBREF0_12`"]
     #[inline(always)]
     pub fn is_cbref0_12(&self) -> bool {
-        **self == CBREF0_A::CBREF0_12
+        *self == CBREF0_A::CBREF0_12
     }
     #[doc = "Checks if the value of the field is `CBREF0_13`"]
     #[inline(always)]
     pub fn is_cbref0_13(&self) -> bool {
-        **self == CBREF0_A::CBREF0_13
+        *self == CBREF0_A::CBREF0_13
     }
     #[doc = "Checks if the value of the field is `CBREF0_14`"]
     #[inline(always)]
     pub fn is_cbref0_14(&self) -> bool {
-        **self == CBREF0_A::CBREF0_14
+        *self == CBREF0_A::CBREF0_14
     }
     #[doc = "Checks if the value of the field is `CBREF0_15`"]
     #[inline(always)]
     pub fn is_cbref0_15(&self) -> bool {
-        **self == CBREF0_A::CBREF0_15
+        *self == CBREF0_A::CBREF0_15
     }
     #[doc = "Checks if the value of the field is `CBREF0_16`"]
     #[inline(always)]
     pub fn is_cbref0_16(&self) -> bool {
-        **self == CBREF0_A::CBREF0_16
+        *self == CBREF0_A::CBREF0_16
     }
     #[doc = "Checks if the value of the field is `CBREF0_17`"]
     #[inline(always)]
     pub fn is_cbref0_17(&self) -> bool {
-        **self == CBREF0_A::CBREF0_17
+        *self == CBREF0_A::CBREF0_17
     }
     #[doc = "Checks if the value of the field is `CBREF0_18`"]
     #[inline(always)]
     pub fn is_cbref0_18(&self) -> bool {
-        **self == CBREF0_A::CBREF0_18
+        *self == CBREF0_A::CBREF0_18
     }
     #[doc = "Checks if the value of the field is `CBREF0_19`"]
     #[inline(always)]
     pub fn is_cbref0_19(&self) -> bool {
-        **self == CBREF0_A::CBREF0_19
+        *self == CBREF0_A::CBREF0_19
     }
     #[doc = "Checks if the value of the field is `CBREF0_20`"]
     #[inline(always)]
     pub fn is_cbref0_20(&self) -> bool {
-        **self == CBREF0_A::CBREF0_20
+        *self == CBREF0_A::CBREF0_20
     }
     #[doc = "Checks if the value of the field is `CBREF0_21`"]
     #[inline(always)]
     pub fn is_cbref0_21(&self) -> bool {
-        **self == CBREF0_A::CBREF0_21
+        *self == CBREF0_A::CBREF0_21
     }
     #[doc = "Checks if the value of the field is `CBREF0_22`"]
     #[inline(always)]
     pub fn is_cbref0_22(&self) -> bool {
-        **self == CBREF0_A::CBREF0_22
+        *self == CBREF0_A::CBREF0_22
     }
     #[doc = "Checks if the value of the field is `CBREF0_23`"]
     #[inline(always)]
     pub fn is_cbref0_23(&self) -> bool {
-        **self == CBREF0_A::CBREF0_23
+        *self == CBREF0_A::CBREF0_23
     }
     #[doc = "Checks if the value of the field is `CBREF0_24`"]
     #[inline(always)]
     pub fn is_cbref0_24(&self) -> bool {
-        **self == CBREF0_A::CBREF0_24
+        *self == CBREF0_A::CBREF0_24
     }
     #[doc = "Checks if the value of the field is `CBREF0_25`"]
     #[inline(always)]
     pub fn is_cbref0_25(&self) -> bool {
-        **self == CBREF0_A::CBREF0_25
+        *self == CBREF0_A::CBREF0_25
     }
     #[doc = "Checks if the value of the field is `CBREF0_26`"]
     #[inline(always)]
     pub fn is_cbref0_26(&self) -> bool {
-        **self == CBREF0_A::CBREF0_26
+        *self == CBREF0_A::CBREF0_26
     }
     #[doc = "Checks if the value of the field is `CBREF0_27`"]
     #[inline(always)]
     pub fn is_cbref0_27(&self) -> bool {
-        **self == CBREF0_A::CBREF0_27
+        *self == CBREF0_A::CBREF0_27
     }
     #[doc = "Checks if the value of the field is `CBREF0_28`"]
     #[inline(always)]
     pub fn is_cbref0_28(&self) -> bool {
-        **self == CBREF0_A::CBREF0_28
+        *self == CBREF0_A::CBREF0_28
     }
     #[doc = "Checks if the value of the field is `CBREF0_29`"]
     #[inline(always)]
     pub fn is_cbref0_29(&self) -> bool {
-        **self == CBREF0_A::CBREF0_29
+        *self == CBREF0_A::CBREF0_29
     }
     #[doc = "Checks if the value of the field is `CBREF0_30`"]
     #[inline(always)]
     pub fn is_cbref0_30(&self) -> bool {
-        **self == CBREF0_A::CBREF0_30
+        *self == CBREF0_A::CBREF0_30
     }
     #[doc = "Checks if the value of the field is `CBREF0_31`"]
     #[inline(always)]
     pub fn is_cbref0_31(&self) -> bool {
-        **self == CBREF0_A::CBREF0_31
-    }
-}
-impl core::ops::Deref for CBREF0_R {
-    type Target = crate::FieldReader<u8, CBREF0_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBREF0_A::CBREF0_31
     }
 }
 #[doc = "Field `CBREF0` writer - Comp. B Reference 0 Resistor Select Bit : 0"]
-pub struct CBREF0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBREF0_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBREF0_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBREF0_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, CBCTL2_SPEC, u8, CBREF0_A, 5, O>;
+impl<'a, const O: u8> CBREF0_W<'a, O> {
     #[doc = "Comp. B Int. Ref.0 Select 0 : 1/32"]
     #[inline(always)]
     pub fn cbref0_0(self) -> &'a mut W {
@@ -493,52 +476,15 @@ impl<'a> CBREF0_W<'a> {
     pub fn cbref0_31(self) -> &'a mut W {
         self.variant(CBREF0_A::CBREF0_31)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u16 & 0x1f);
-        self.w
-    }
 }
 #[doc = "Field `CBRSEL` reader - Comp. B Reference select"]
-pub struct CBRSEL_R(crate::FieldReader<bool, bool>);
-impl CBRSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBRSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBRSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBRSEL_R = crate::BitReader<bool>;
 #[doc = "Field `CBRSEL` writer - Comp. B Reference select"]
-pub struct CBRSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBRSEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
-        self.w
-    }
-}
+pub type CBRSEL_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL2_SPEC, bool, O>;
+#[doc = "Field `CBRS` reader - Comp. B Reference Source Bit : 0"]
+pub type CBRS_R = crate::FieldReader<u8, CBRS_A>;
 #[doc = "Comp. B Reference Source Bit : 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBRS_A {
     #[doc = "0: Comp. B Reference Source 0 : Off"]
@@ -556,14 +502,8 @@ impl From<CBRS_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBRS` reader - Comp. B Reference Source Bit : 0"]
-pub struct CBRS_R(crate::FieldReader<u8, CBRS_A>);
 impl CBRS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBRS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBRS_A {
         match self.bits {
@@ -577,41 +517,27 @@ impl CBRS_R {
     #[doc = "Checks if the value of the field is `CBRS_0`"]
     #[inline(always)]
     pub fn is_cbrs_0(&self) -> bool {
-        **self == CBRS_A::CBRS_0
+        *self == CBRS_A::CBRS_0
     }
     #[doc = "Checks if the value of the field is `CBRS_1`"]
     #[inline(always)]
     pub fn is_cbrs_1(&self) -> bool {
-        **self == CBRS_A::CBRS_1
+        *self == CBRS_A::CBRS_1
     }
     #[doc = "Checks if the value of the field is `CBRS_2`"]
     #[inline(always)]
     pub fn is_cbrs_2(&self) -> bool {
-        **self == CBRS_A::CBRS_2
+        *self == CBRS_A::CBRS_2
     }
     #[doc = "Checks if the value of the field is `CBRS_3`"]
     #[inline(always)]
     pub fn is_cbrs_3(&self) -> bool {
-        **self == CBRS_A::CBRS_3
-    }
-}
-impl core::ops::Deref for CBRS_R {
-    type Target = crate::FieldReader<u8, CBRS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBRS_A::CBRS_3
     }
 }
 #[doc = "Field `CBRS` writer - Comp. B Reference Source Bit : 0"]
-pub struct CBRS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBRS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBRS_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBRS_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u16, CBCTL2_SPEC, u8, CBRS_A, 2, O>;
+impl<'a, const O: u8> CBRS_W<'a, O> {
     #[doc = "Comp. B Reference Source 0 : Off"]
     #[inline(always)]
     pub fn cbrs_0(self) -> &'a mut W {
@@ -632,15 +558,11 @@ impl<'a> CBRS_W<'a> {
     pub fn cbrs_3(self) -> &'a mut W {
         self.variant(CBRS_A::CBRS_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u16 & 0x03) << 6);
-        self.w
-    }
 }
+#[doc = "Field `CBREF1` reader - Comp. B Reference 1 Resistor Select Bit : 0"]
+pub type CBREF1_R = crate::FieldReader<u8, CBREF1_A>;
 #[doc = "Comp. B Reference 1 Resistor Select Bit : 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBREF1_A {
     #[doc = "0: Comp. B Int. Ref.1 Select 0 : 1/32"]
@@ -714,14 +636,8 @@ impl From<CBREF1_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBREF1` reader - Comp. B Reference 1 Resistor Select Bit : 0"]
-pub struct CBREF1_R(crate::FieldReader<u8, CBREF1_A>);
 impl CBREF1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBREF1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBREF1_A {
         match self.bits {
@@ -763,181 +679,168 @@ impl CBREF1_R {
     #[doc = "Checks if the value of the field is `CBREF1_0`"]
     #[inline(always)]
     pub fn is_cbref1_0(&self) -> bool {
-        **self == CBREF1_A::CBREF1_0
+        *self == CBREF1_A::CBREF1_0
     }
     #[doc = "Checks if the value of the field is `CBREF1_1`"]
     #[inline(always)]
     pub fn is_cbref1_1(&self) -> bool {
-        **self == CBREF1_A::CBREF1_1
+        *self == CBREF1_A::CBREF1_1
     }
     #[doc = "Checks if the value of the field is `CBREF1_2`"]
     #[inline(always)]
     pub fn is_cbref1_2(&self) -> bool {
-        **self == CBREF1_A::CBREF1_2
+        *self == CBREF1_A::CBREF1_2
     }
     #[doc = "Checks if the value of the field is `CBREF1_3`"]
     #[inline(always)]
     pub fn is_cbref1_3(&self) -> bool {
-        **self == CBREF1_A::CBREF1_3
+        *self == CBREF1_A::CBREF1_3
     }
     #[doc = "Checks if the value of the field is `CBREF1_4`"]
     #[inline(always)]
     pub fn is_cbref1_4(&self) -> bool {
-        **self == CBREF1_A::CBREF1_4
+        *self == CBREF1_A::CBREF1_4
     }
     #[doc = "Checks if the value of the field is `CBREF1_5`"]
     #[inline(always)]
     pub fn is_cbref1_5(&self) -> bool {
-        **self == CBREF1_A::CBREF1_5
+        *self == CBREF1_A::CBREF1_5
     }
     #[doc = "Checks if the value of the field is `CBREF1_6`"]
     #[inline(always)]
     pub fn is_cbref1_6(&self) -> bool {
-        **self == CBREF1_A::CBREF1_6
+        *self == CBREF1_A::CBREF1_6
     }
     #[doc = "Checks if the value of the field is `CBREF1_7`"]
     #[inline(always)]
     pub fn is_cbref1_7(&self) -> bool {
-        **self == CBREF1_A::CBREF1_7
+        *self == CBREF1_A::CBREF1_7
     }
     #[doc = "Checks if the value of the field is `CBREF1_8`"]
     #[inline(always)]
     pub fn is_cbref1_8(&self) -> bool {
-        **self == CBREF1_A::CBREF1_8
+        *self == CBREF1_A::CBREF1_8
     }
     #[doc = "Checks if the value of the field is `CBREF1_9`"]
     #[inline(always)]
     pub fn is_cbref1_9(&self) -> bool {
-        **self == CBREF1_A::CBREF1_9
+        *self == CBREF1_A::CBREF1_9
     }
     #[doc = "Checks if the value of the field is `CBREF1_10`"]
     #[inline(always)]
     pub fn is_cbref1_10(&self) -> bool {
-        **self == CBREF1_A::CBREF1_10
+        *self == CBREF1_A::CBREF1_10
     }
     #[doc = "Checks if the value of the field is `CBREF1_11`"]
     #[inline(always)]
     pub fn is_cbref1_11(&self) -> bool {
-        **self == CBREF1_A::CBREF1_11
+        *self == CBREF1_A::CBREF1_11
     }
     #[doc = "Checks if the value of the field is `CBREF1_12`"]
     #[inline(always)]
     pub fn is_cbref1_12(&self) -> bool {
-        **self == CBREF1_A::CBREF1_12
+        *self == CBREF1_A::CBREF1_12
     }
     #[doc = "Checks if the value of the field is `CBREF1_13`"]
     #[inline(always)]
     pub fn is_cbref1_13(&self) -> bool {
-        **self == CBREF1_A::CBREF1_13
+        *self == CBREF1_A::CBREF1_13
     }
     #[doc = "Checks if the value of the field is `CBREF1_14`"]
     #[inline(always)]
     pub fn is_cbref1_14(&self) -> bool {
-        **self == CBREF1_A::CBREF1_14
+        *self == CBREF1_A::CBREF1_14
     }
     #[doc = "Checks if the value of the field is `CBREF1_15`"]
     #[inline(always)]
     pub fn is_cbref1_15(&self) -> bool {
-        **self == CBREF1_A::CBREF1_15
+        *self == CBREF1_A::CBREF1_15
     }
     #[doc = "Checks if the value of the field is `CBREF1_16`"]
     #[inline(always)]
     pub fn is_cbref1_16(&self) -> bool {
-        **self == CBREF1_A::CBREF1_16
+        *self == CBREF1_A::CBREF1_16
     }
     #[doc = "Checks if the value of the field is `CBREF1_17`"]
     #[inline(always)]
     pub fn is_cbref1_17(&self) -> bool {
-        **self == CBREF1_A::CBREF1_17
+        *self == CBREF1_A::CBREF1_17
     }
     #[doc = "Checks if the value of the field is `CBREF1_18`"]
     #[inline(always)]
     pub fn is_cbref1_18(&self) -> bool {
-        **self == CBREF1_A::CBREF1_18
+        *self == CBREF1_A::CBREF1_18
     }
     #[doc = "Checks if the value of the field is `CBREF1_19`"]
     #[inline(always)]
     pub fn is_cbref1_19(&self) -> bool {
-        **self == CBREF1_A::CBREF1_19
+        *self == CBREF1_A::CBREF1_19
     }
     #[doc = "Checks if the value of the field is `CBREF1_20`"]
     #[inline(always)]
     pub fn is_cbref1_20(&self) -> bool {
-        **self == CBREF1_A::CBREF1_20
+        *self == CBREF1_A::CBREF1_20
     }
     #[doc = "Checks if the value of the field is `CBREF1_21`"]
     #[inline(always)]
     pub fn is_cbref1_21(&self) -> bool {
-        **self == CBREF1_A::CBREF1_21
+        *self == CBREF1_A::CBREF1_21
     }
     #[doc = "Checks if the value of the field is `CBREF1_22`"]
     #[inline(always)]
     pub fn is_cbref1_22(&self) -> bool {
-        **self == CBREF1_A::CBREF1_22
+        *self == CBREF1_A::CBREF1_22
     }
     #[doc = "Checks if the value of the field is `CBREF1_23`"]
     #[inline(always)]
     pub fn is_cbref1_23(&self) -> bool {
-        **self == CBREF1_A::CBREF1_23
+        *self == CBREF1_A::CBREF1_23
     }
     #[doc = "Checks if the value of the field is `CBREF1_24`"]
     #[inline(always)]
     pub fn is_cbref1_24(&self) -> bool {
-        **self == CBREF1_A::CBREF1_24
+        *self == CBREF1_A::CBREF1_24
     }
     #[doc = "Checks if the value of the field is `CBREF1_25`"]
     #[inline(always)]
     pub fn is_cbref1_25(&self) -> bool {
-        **self == CBREF1_A::CBREF1_25
+        *self == CBREF1_A::CBREF1_25
     }
     #[doc = "Checks if the value of the field is `CBREF1_26`"]
     #[inline(always)]
     pub fn is_cbref1_26(&self) -> bool {
-        **self == CBREF1_A::CBREF1_26
+        *self == CBREF1_A::CBREF1_26
     }
     #[doc = "Checks if the value of the field is `CBREF1_27`"]
     #[inline(always)]
     pub fn is_cbref1_27(&self) -> bool {
-        **self == CBREF1_A::CBREF1_27
+        *self == CBREF1_A::CBREF1_27
     }
     #[doc = "Checks if the value of the field is `CBREF1_28`"]
     #[inline(always)]
     pub fn is_cbref1_28(&self) -> bool {
-        **self == CBREF1_A::CBREF1_28
+        *self == CBREF1_A::CBREF1_28
     }
     #[doc = "Checks if the value of the field is `CBREF1_29`"]
     #[inline(always)]
     pub fn is_cbref1_29(&self) -> bool {
-        **self == CBREF1_A::CBREF1_29
+        *self == CBREF1_A::CBREF1_29
     }
     #[doc = "Checks if the value of the field is `CBREF1_30`"]
     #[inline(always)]
     pub fn is_cbref1_30(&self) -> bool {
-        **self == CBREF1_A::CBREF1_30
+        *self == CBREF1_A::CBREF1_30
     }
     #[doc = "Checks if the value of the field is `CBREF1_31`"]
     #[inline(always)]
     pub fn is_cbref1_31(&self) -> bool {
-        **self == CBREF1_A::CBREF1_31
-    }
-}
-impl core::ops::Deref for CBREF1_R {
-    type Target = crate::FieldReader<u8, CBREF1_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBREF1_A::CBREF1_31
     }
 }
 #[doc = "Field `CBREF1` writer - Comp. B Reference 1 Resistor Select Bit : 0"]
-pub struct CBREF1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBREF1_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBREF1_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBREF1_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, CBCTL2_SPEC, u8, CBREF1_A, 5, O>;
+impl<'a, const O: u8> CBREF1_W<'a, O> {
     #[doc = "Comp. B Int. Ref.1 Select 0 : 1/32"]
     #[inline(always)]
     pub fn cbref1_0(self) -> &'a mut W {
@@ -1098,15 +1001,11 @@ impl<'a> CBREF1_W<'a> {
     pub fn cbref1_31(self) -> &'a mut W {
         self.variant(CBREF1_A::CBREF1_31)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 8)) | ((value as u16 & 0x1f) << 8);
-        self.w
-    }
 }
+#[doc = "Field `CBREFL` reader - Comp. B Reference voltage level Bit : 0"]
+pub type CBREFL_R = crate::FieldReader<u8, CBREFL_A>;
 #[doc = "Comp. B Reference voltage level Bit : 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CBREFL_A {
     #[doc = "0: Comp. B Reference voltage level 0 : None"]
@@ -1124,14 +1023,8 @@ impl From<CBREFL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CBREFL` reader - Comp. B Reference voltage level Bit : 0"]
-pub struct CBREFL_R(crate::FieldReader<u8, CBREFL_A>);
 impl CBREFL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CBREFL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBREFL_A {
         match self.bits {
@@ -1145,41 +1038,28 @@ impl CBREFL_R {
     #[doc = "Checks if the value of the field is `CBREFL_0`"]
     #[inline(always)]
     pub fn is_cbrefl_0(&self) -> bool {
-        **self == CBREFL_A::CBREFL_0
+        *self == CBREFL_A::CBREFL_0
     }
     #[doc = "Checks if the value of the field is `CBREFL_1`"]
     #[inline(always)]
     pub fn is_cbrefl_1(&self) -> bool {
-        **self == CBREFL_A::CBREFL_1
+        *self == CBREFL_A::CBREFL_1
     }
     #[doc = "Checks if the value of the field is `CBREFL_2`"]
     #[inline(always)]
     pub fn is_cbrefl_2(&self) -> bool {
-        **self == CBREFL_A::CBREFL_2
+        *self == CBREFL_A::CBREFL_2
     }
     #[doc = "Checks if the value of the field is `CBREFL_3`"]
     #[inline(always)]
     pub fn is_cbrefl_3(&self) -> bool {
-        **self == CBREFL_A::CBREFL_3
-    }
-}
-impl core::ops::Deref for CBREFL_R {
-    type Target = crate::FieldReader<u8, CBREFL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CBREFL_A::CBREFL_3
     }
 }
 #[doc = "Field `CBREFL` writer - Comp. B Reference voltage level Bit : 0"]
-pub struct CBREFL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBREFL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CBREFL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CBREFL_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u16, CBCTL2_SPEC, u8, CBREFL_A, 2, O>;
+impl<'a, const O: u8> CBREFL_W<'a, O> {
     #[doc = "Comp. B Reference voltage level 0 : None"]
     #[inline(always)]
     pub fn cbrefl_0(self) -> &'a mut W {
@@ -1200,50 +1080,11 @@ impl<'a> CBREFL_W<'a> {
     pub fn cbrefl_3(self) -> &'a mut W {
         self.variant(CBREFL_A::CBREFL_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u16 & 0x03) << 13);
-        self.w
-    }
 }
 #[doc = "Field `CBREFACC` reader - Comp. B Reference Accuracy"]
-pub struct CBREFACC_R(crate::FieldReader<bool, bool>);
-impl CBREFACC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CBREFACC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBREFACC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBREFACC_R = crate::BitReader<bool>;
 #[doc = "Field `CBREFACC` writer - Comp. B Reference Accuracy"]
-pub struct CBREFACC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CBREFACC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u16 & 0x01) << 15);
-        self.w
-    }
-}
+pub type CBREFACC_W<'a, const O: u8> = crate::BitWriter<'a, u16, CBCTL2_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:4 - Comp. B Reference 0 Resistor Select Bit : 0"]
     #[inline(always)]
@@ -1253,12 +1094,12 @@ impl R {
     #[doc = "Bit 5 - Comp. B Reference select"]
     #[inline(always)]
     pub fn cbrsel(&self) -> CBRSEL_R {
-        CBRSEL_R::new(((self.bits >> 5) & 0x01) != 0)
+        CBRSEL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Comp. B Reference Source Bit : 0"]
     #[inline(always)]
     pub fn cbrs(&self) -> CBRS_R {
-        CBRS_R::new(((self.bits >> 6) & 0x03) as u8)
+        CBRS_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:12 - Comp. B Reference 1 Resistor Select Bit : 0"]
     #[inline(always)]
@@ -1268,44 +1109,50 @@ impl R {
     #[doc = "Bits 13:14 - Comp. B Reference voltage level Bit : 0"]
     #[inline(always)]
     pub fn cbrefl(&self) -> CBREFL_R {
-        CBREFL_R::new(((self.bits >> 13) & 0x03) as u8)
+        CBREFL_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - Comp. B Reference Accuracy"]
     #[inline(always)]
     pub fn cbrefacc(&self) -> CBREFACC_R {
-        CBREFACC_R::new(((self.bits >> 15) & 0x01) != 0)
+        CBREFACC_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - Comp. B Reference 0 Resistor Select Bit : 0"]
     #[inline(always)]
-    pub fn cbref0(&mut self) -> CBREF0_W {
-        CBREF0_W { w: self }
+    #[must_use]
+    pub fn cbref0(&mut self) -> CBREF0_W<0> {
+        CBREF0_W::new(self)
     }
     #[doc = "Bit 5 - Comp. B Reference select"]
     #[inline(always)]
-    pub fn cbrsel(&mut self) -> CBRSEL_W {
-        CBRSEL_W { w: self }
+    #[must_use]
+    pub fn cbrsel(&mut self) -> CBRSEL_W<5> {
+        CBRSEL_W::new(self)
     }
     #[doc = "Bits 6:7 - Comp. B Reference Source Bit : 0"]
     #[inline(always)]
-    pub fn cbrs(&mut self) -> CBRS_W {
-        CBRS_W { w: self }
+    #[must_use]
+    pub fn cbrs(&mut self) -> CBRS_W<6> {
+        CBRS_W::new(self)
     }
     #[doc = "Bits 8:12 - Comp. B Reference 1 Resistor Select Bit : 0"]
     #[inline(always)]
-    pub fn cbref1(&mut self) -> CBREF1_W {
-        CBREF1_W { w: self }
+    #[must_use]
+    pub fn cbref1(&mut self) -> CBREF1_W<8> {
+        CBREF1_W::new(self)
     }
     #[doc = "Bits 13:14 - Comp. B Reference voltage level Bit : 0"]
     #[inline(always)]
-    pub fn cbrefl(&mut self) -> CBREFL_W {
-        CBREFL_W { w: self }
+    #[must_use]
+    pub fn cbrefl(&mut self) -> CBREFL_W<13> {
+        CBREFL_W::new(self)
     }
     #[doc = "Bit 15 - Comp. B Reference Accuracy"]
     #[inline(always)]
-    pub fn cbrefacc(&mut self) -> CBREFACC_W {
-        CBREFACC_W { w: self }
+    #[must_use]
+    pub fn cbrefacc(&mut self) -> CBREFACC_W<15> {
+        CBREFACC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -1326,11 +1173,10 @@ impl crate::Readable for CBCTL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [cbctl2::W](W) writer structure"]
 impl crate::Writable for CBCTL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CBCTL2 to value 0"]
 impl crate::Resettable for CBCTL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

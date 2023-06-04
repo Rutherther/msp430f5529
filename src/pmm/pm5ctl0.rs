@@ -35,54 +35,22 @@ impl From<crate::W<PM5CTL0_SPEC>> for W {
     }
 }
 #[doc = "Field `LOCKLPM5` reader - Lock I/O pin configuration upon entry/exit to/from LPM5"]
-pub struct LOCKLPM5_R(crate::FieldReader<bool, bool>);
-impl LOCKLPM5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOCKLPM5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOCKLPM5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOCKLPM5_R = crate::BitReader<bool>;
 #[doc = "Field `LOCKLPM5` writer - Lock I/O pin configuration upon entry/exit to/from LPM5"]
-pub struct LOCKLPM5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOCKLPM5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type LOCKLPM5_W<'a, const O: u8> = crate::BitWriter<'a, u16, PM5CTL0_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Lock I/O pin configuration upon entry/exit to/from LPM5"]
     #[inline(always)]
     pub fn locklpm5(&self) -> LOCKLPM5_R {
-        LOCKLPM5_R::new((self.bits & 0x01) != 0)
+        LOCKLPM5_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Lock I/O pin configuration upon entry/exit to/from LPM5"]
     #[inline(always)]
-    pub fn locklpm5(&mut self) -> LOCKLPM5_W {
-        LOCKLPM5_W { w: self }
+    #[must_use]
+    pub fn locklpm5(&mut self) -> LOCKLPM5_W<0> {
+        LOCKLPM5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for PM5CTL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [pm5ctl0::W](W) writer structure"]
 impl crate::Writable for PM5CTL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PM5CTL0 to value 0"]
 impl crate::Resettable for PM5CTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

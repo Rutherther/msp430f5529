@@ -35,148 +35,52 @@ impl From<crate::W<UCSCTL7_SPEC>> for W {
     }
 }
 #[doc = "Field `DCOFFG` reader - DCO Fault Flag"]
-pub struct DCOFFG_R(crate::FieldReader<bool, bool>);
-impl DCOFFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCOFFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCOFFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCOFFG_R = crate::BitReader<bool>;
 #[doc = "Field `DCOFFG` writer - DCO Fault Flag"]
-pub struct DCOFFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCOFFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type DCOFFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL7_SPEC, bool, O>;
 #[doc = "Field `XT1LFOFFG` reader - XT1 Low Frequency Oscillator Fault Flag"]
-pub struct XT1LFOFFG_R(crate::FieldReader<bool, bool>);
-impl XT1LFOFFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XT1LFOFFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XT1LFOFFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XT1LFOFFG_R = crate::BitReader<bool>;
 #[doc = "Field `XT1LFOFFG` writer - XT1 Low Frequency Oscillator Fault Flag"]
-pub struct XT1LFOFFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XT1LFOFFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type XT1LFOFFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL7_SPEC, bool, O>;
 #[doc = "Field `XT2OFFG` reader - High Frequency Oscillator 2 Fault Flag"]
-pub struct XT2OFFG_R(crate::FieldReader<bool, bool>);
-impl XT2OFFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XT2OFFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XT2OFFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XT2OFFG_R = crate::BitReader<bool>;
 #[doc = "Field `XT2OFFG` writer - High Frequency Oscillator 2 Fault Flag"]
-pub struct XT2OFFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XT2OFFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type XT2OFFG_W<'a, const O: u8> = crate::BitWriter<'a, u16, UCSCTL7_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - DCO Fault Flag"]
     #[inline(always)]
     pub fn dcoffg(&self) -> DCOFFG_R {
-        DCOFFG_R::new((self.bits & 0x01) != 0)
+        DCOFFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - XT1 Low Frequency Oscillator Fault Flag"]
     #[inline(always)]
     pub fn xt1lfoffg(&self) -> XT1LFOFFG_R {
-        XT1LFOFFG_R::new(((self.bits >> 1) & 0x01) != 0)
+        XT1LFOFFG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - High Frequency Oscillator 2 Fault Flag"]
     #[inline(always)]
     pub fn xt2offg(&self) -> XT2OFFG_R {
-        XT2OFFG_R::new(((self.bits >> 3) & 0x01) != 0)
+        XT2OFFG_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - DCO Fault Flag"]
     #[inline(always)]
-    pub fn dcoffg(&mut self) -> DCOFFG_W {
-        DCOFFG_W { w: self }
+    #[must_use]
+    pub fn dcoffg(&mut self) -> DCOFFG_W<0> {
+        DCOFFG_W::new(self)
     }
     #[doc = "Bit 1 - XT1 Low Frequency Oscillator Fault Flag"]
     #[inline(always)]
-    pub fn xt1lfoffg(&mut self) -> XT1LFOFFG_W {
-        XT1LFOFFG_W { w: self }
+    #[must_use]
+    pub fn xt1lfoffg(&mut self) -> XT1LFOFFG_W<1> {
+        XT1LFOFFG_W::new(self)
     }
     #[doc = "Bit 3 - High Frequency Oscillator 2 Fault Flag"]
     #[inline(always)]
-    pub fn xt2offg(&mut self) -> XT2OFFG_W {
-        XT2OFFG_W { w: self }
+    #[must_use]
+    pub fn xt2offg(&mut self) -> XT2OFFG_W<3> {
+        XT2OFFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -197,11 +101,10 @@ impl crate::Readable for UCSCTL7_SPEC {
 #[doc = "`write(|w| ..)` method takes [ucsctl7::W](W) writer structure"]
 impl crate::Writable for UCSCTL7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCSCTL7 to value 0"]
 impl crate::Resettable for UCSCTL7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
